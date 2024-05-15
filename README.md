@@ -59,6 +59,14 @@
                 <li><a href="https://github.com/ricardo-semiao/misc-general">misc-general</a></li>
             </ul>
         </td>
+        <td valign="top">
+            <p>Personal:</p>
+            <ul>
+                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao.github.io/">personal website</a></li>
+                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao-cv">misc-curriculum</a></li>
+                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao">this readme</a></li>
+            </ul>
+        </td>
     </tr>
 </table>
 </div>
