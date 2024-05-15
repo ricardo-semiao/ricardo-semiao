@@ -2,14 +2,16 @@
 
 <p align="center">I'm a master's student in economics at FGV-EESP, with wide interests in statistics, data science, and programming.</p>
 
-<p align="center">Contacts/networks: 
+
+<h4 align="center">Contacts/networks:</h4>
+<p align="center">
     <a href="mailto:ricardo.semiao@outlook.com"><i class="fas fa-envelope"></i> Email</a> |
     <a href="https://linkedin.com/in/ricardo-semiao"><i class="fab fa-linkedin"></i> Linkedin</a> |
     <a href="https://stackoverflow.com/users/13048728"><i class="fab fa-stack-overflow"></i> Stack Overflow</a>
 </p>
 
-<h4 align="center">My projects:</h4>
 
+<h4 align="center">My projects:</h4>
 <div align="center">
 <table>
     <tr>
@@ -33,6 +35,20 @@
             <ul>
                 <li><a href="https://github.com/ricardo-semiao/varutils">varutils</a></li>
                 <li><a href="https://github.com/ricardo-semiao/vardiff">vardiff</a></li>
+            </ul>
+        </td>
+    </tr>
+</table>
+</div>
+
+<div align="center">
+<table>
+    <tr>
+        <td valign="top">
+            <p>Freelance projects:</p>
+            <ul>
+                <li><a href="https://github.com/mevaldt/diversified_crypto">diversified_crypto</a></li>
+                <li><a href="https://github.com/ricardo-semiao/genero-itamaraty">genero-itamaraty</a></li>
             </ul>
         </td>
         <td valign="top">
