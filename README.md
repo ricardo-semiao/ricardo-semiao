@@ -5,8 +5,9 @@
 <p align="center">I'm a master's student in economics at FGV-EESP, with wide interests in statistics, data science, and programming.</p>
 
 
-<h4 align="center">Contacts/networks:</h4>
+<h4 align="center">Socials:</h4>
 <p align="center">
+    <a href="https://ricardo-semiao.github.io/"><i class="fas fa-globe"></i> Homepage</a> |
     <a href="mailto:ricardo.semiao@outlook.com"><i class="fas fa-envelope"></i> Email</a> |
     <a href="https://linkedin.com/in/ricardo-semiao"><i class="fab fa-linkedin"></i> Linkedin</a> |
     <a href="https://stackoverflow.com/users/13048728"><i class="fab fa-stack-overflow"></i> Stack Overflow</a> |
