@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 <h3 align="center">Welcome / Bem Vindo !</h3>
 
 <p align="center">I'm a master's student in economics at FGV-EESP, with wide interests in statistics, data science, and programming.</p>
@@ -7,9 +9,9 @@
 <p align="center">
     <a href="mailto:ricardo.semiao@outlook.com"><i class="fas fa-envelope"></i> Email</a> |
     <a href="https://linkedin.com/in/ricardo-semiao"><i class="fab fa-linkedin"></i> Linkedin</a> |
-    <a href="https://stackoverflow.com/users/13048728"><i class="fab fa-stack-overflow"></i> Stack Overflow</a>
+    <a href="https://stackoverflow.com/users/13048728"><i class="fab fa-stack-overflow"></i> Stack Overflow</a> |
+    <a href="https://twitter.com/ricardo_semiao"><i class="fab fa-twitter"></i> Twitter</a>
 </p>
-
 
 <h4 align="center">My projects:</h4>
 <div align="center">
