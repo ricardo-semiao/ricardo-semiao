@@ -65,7 +65,7 @@
         <td valign="top">
             <p>Personal:</p>
             <ul>
-                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao.github.io/">personal website</a></li>
+                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao.github.io/">personal homepage</a></li>
                 <li><a href="https://github.com/ricardo-semiao/ricardo-semiao-cv">curriculum</a></li>
                 <li><a href="https://github.com/ricardo-semiao/ricardo-semiao">this readme</a></li>
             </ul>
