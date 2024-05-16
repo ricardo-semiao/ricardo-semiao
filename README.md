@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-<h3 align="center">Welcome / Bem Vindo !</h3>
+<h3 align="center">Welcome!</h3>
 
-<p align="center">I'm a master's student in economics at FGV-EESP, with wide interests in statistics, data science, and programming.</p>
+<p align="center">I'm a master's student in economics at FGV-EESP, with wide interests in statistics, data science, and programming. Check some of my projects below!</p>
 
 
 <h4 align="center">Socials:</h4>
@@ -29,7 +29,7 @@
         <td valign="top">
             <p>Educational materials:</p>
             <ul>
-                <li><a href="https://github.com/ricardo-semiao/course-r">course-r</a></li>
+                <li><a href="https://github.com/ricardo-semiao/rfcd">course-r</a></li>
                 <li><a href="https://github.com/ricardo-semiao/course-python">course-python</a></li>
             </ul>
         </td>
