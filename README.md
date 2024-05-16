@@ -29,7 +29,7 @@
         <td valign="top">
             <p>Educational materials:</p>
             <ul>
-                <li><a href="https://github.com/ricardo-semiao/rfcd">course-r</a></li>
+                <li><a href="https://github.com/ricardo-semiao/rfcd">rfcd</a></li>
                 <li><a href="https://github.com/ricardo-semiao/course-python">course-python</a></li>
             </ul>
         </td>
