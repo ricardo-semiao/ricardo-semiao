@@ -37,7 +37,6 @@
             <p>Code packages:</p>
             <ul>
                 <li><a href="https://github.com/ricardo-semiao/varutils">varutils</a></li>
-                <li><a href="https://github.com/ricardo-semiao/vardiff">vardiff</a></li>
             </ul>
         </td>
     </tr>
@@ -51,7 +50,6 @@
             <p>Freelance projects:</p>
             <ul>
                 <li><a href="https://github.com/mevaldt/diversified_crypto">diversified_crypto</a></li>
-                <li><a href="https://github.com/ricardo-semiao/genero-itamaraty">genero-itamaraty</a></li>
             </ul>
         </td>
         <td valign="top">
@@ -65,9 +63,9 @@
         <td valign="top">
             <p>Personal:</p>
             <ul>
-                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao.github.io/">personal homepage</a></li>
-                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao-cv">curriculum</a></li>
-                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao">this readme</a></li>
+                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao.github.io/">Personal homepage</a></li>
+                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao-cv">Curriculum</a></li>
+                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao">This readme</a></li>
             </ul>
         </td>
     </tr>
