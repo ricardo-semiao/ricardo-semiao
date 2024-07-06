@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="pal.css">
+        <style>
+            .grid-item {
+                width: 300px;
+                height: 100px;
+            }
+            .grid-container {
+                display: flex;
+                grid-template-columns: repeat(2, 1fr); /* Creates two columns of equal width */
+                gap: 10px; /* Optional: Adds some space between the grid items */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="grid-container">
+            <div class="grid-item" style="background-color: var(--gray);"></div>
+            <div class="grid-item" style="background-color: var(--red);"></div>
+            <div class="grid-item" style="background-color: var(--orange);"></div>
+        </div>
+        <div class="grid-container"></div>
+        <div class="grid-container">
+            <div class="grid-item" style="background-color: var(--yellow);"></div>
+            <div class="grid-item" style="background-color: var(--green);"></div>
+            <div class="grid-item" style="background-color: var(--blue);"></div>
+        </div>
+    </body>
+</html>

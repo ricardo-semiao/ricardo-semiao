@@ -37,6 +37,7 @@
             <p>Code packages:</p>
             <ul>
                 <li><a href="https://github.com/ricardo-semiao/varutils">varutils</a></li>
+                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao.github.io/tree/main/packages">template_injector</a></li>
             </ul>
         </td>
     </tr>
@@ -63,11 +64,15 @@
         <td valign="top">
             <p>Personal:</p>
             <ul>
-                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao.github.io/">Personal homepage</a></li>
-                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao-cv">Curriculum</a></li>
-                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao">This readme</a></li>
+                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao.github.io/">ricardo-semiao.github.io</a></li>
+                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao">Personal themes</a></li>
             </ul>
         </td>
     </tr>
 </table>
+</div>
+
+<h4 align="center">My projects:</h4>
+<div align="center">
+    <p><a href="https://github.com/ricardo-semiao/ricardo-semiao">This repository</a> also have my personal themes I use across projects, custom palettes, etc.</p>
 </div>
