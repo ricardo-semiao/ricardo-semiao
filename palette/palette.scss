@@ -28,4 +28,4 @@ $blue: hsl(185, 100%, 30%);
   --darkblue: #{adjust-luminance($blue, .2)};
 }
 
-/* sass "palette/palette.scss" "palette/palette.css" */
+/* Compile with: sass "palette/palette.scss" "palette/palette.css" */
