@@ -1,0 +1,31 @@
+@function adjust-luminance($color, $percentage) {
+  $h: hue($color);
+  $s: saturation($color);
+  $l: lightness($color) * (1 - $percentage);
+  @return hsl($h, $s, $l);
+}
+
+$gray: hsl(0, 0%, 95%);
+$red: hsl(350, 100%, 40%); 
+$orange: hsl(25, 100%, 40%);
+$yellow: hsl(47, 100%, 45%);
+$green: hsl(163, 100%, 30%);
+$blue: hsl(185, 100%, 30%);
+
+:root {
+  --gray: #{$gray};
+  --red: #{$red}; 
+  --orange: #{$orange};
+  --yellow: #{$yellow};
+  --green: #{$green};
+  --blue: #{$blue};
+
+  --gray-dark: #{adjust-luminance($gray, .2)};
+  --red-dark: #{adjust-luminance($red, .2)};
+  --orange-dark: #{adjust-luminance($orange, .2)};
+  --yellow-dark: #{adjust-luminance($yellow, .2)};
+  --green-dark: #{adjust-luminance($green, .2)};
+  --blue-dark: #{adjust-luminance($blue, .2)};
+}
+
+/* sass "palette/palette.scss" "palette/palette.css" */
