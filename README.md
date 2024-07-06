@@ -48,31 +48,24 @@
 <table>
     <tr>
         <td valign="top">
-            <p>Freelance projects:</p>
+            <p>Freelance and challenges:</p>
             <ul>
                 <li><a href="https://github.com/mevaldt/diversified_crypto">diversified_crypto</a></li>
-            </ul>
-        </td>
-        <td valign="top">
-            <p>Challenges and miscellaneous:</p>
-            <ul>
                 <li><a href="https://github.com/ricardo-semiao/challenge-constdev">challenge-constdev</a></li>
-                <li><a href="https://github.com/ricardo-semiao/misc-allocator-ga">misc-allocator-ga</a></li>
-                <li><a href="https://github.com/ricardo-semiao/misc-general">misc-general</a></li>
             </ul>
         </td>
         <td valign="top">
-            <p>Personal:</p>
+            <p>Miscellaneous:</p>
             <ul>
                 <li><a href="https://github.com/ricardo-semiao/ricardo-semiao.github.io/">ricardo-semiao.github.io</a></li>
-                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao">Personal themes</a></li>
+                <li><a href="https://github.com/ricardo-semiao/misc-allocator-ga">misc-allocator-ga</a></li>
+                <li><a href="https://github.com/ricardo-semiao/misc-general">misc-general</a></li>
             </ul>
         </td>
     </tr>
 </table>
 </div>
 
-<h4 align="center">My projects:</h4>
 <div align="center">
-    <p><a href="https://github.com/ricardo-semiao/ricardo-semiao">This repository</a> also have my personal themes I use across projects, custom palettes, etc.</p>
+    <p>The <a href="https://github.com/ricardo-semiao/ricardo-semiao">ricardo-semiao repository</a> also contains my personal themes, custom palettes etc., that I use across projects.</p>
 </div>
