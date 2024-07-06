@@ -20,12 +20,12 @@ $blue: hsl(185, 100%, 30%);
   --green: #{$green};
   --blue: #{$blue};
 
-  --gray-dark: #{adjust-luminance($gray, .2)};
-  --red-dark: #{adjust-luminance($red, .2)};
-  --orange-dark: #{adjust-luminance($orange, .2)};
-  --yellow-dark: #{adjust-luminance($yellow, .2)};
-  --green-dark: #{adjust-luminance($green, .2)};
-  --blue-dark: #{adjust-luminance($blue, .2)};
+  --darkgray: #{adjust-luminance($gray, .2)};
+  --darkred: #{adjust-luminance($red, .2)};
+  --darkorange: #{adjust-luminance($orange, .2)};
+  --darkyellow: #{adjust-luminance($yellow, .2)};
+  --darkgreen: #{adjust-luminance($green, .2)};
+  --darkblue: #{adjust-luminance($blue, .2)};
 }
 
 /* sass "palette/palette.scss" "palette/palette.css" */

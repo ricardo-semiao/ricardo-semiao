@@ -5,12 +5,12 @@
   --yellow: hsl(47, 100%, 45%);
   --green: hsl(163, 100%, 30%);
   --blue: hsl(185, 100%, 30%);
-  --gray-dark: hsl(0, 0%, 76%);
-  --red-dark: hsl(350, 100%, 32%);
-  --orange-dark: hsl(25, 100%, 32%);
-  --yellow-dark: hsl(47, 100%, 36%);
-  --green-dark: hsl(163, 100%, 24%);
-  --blue-dark: hsl(185, 100%, 24%);
+  --darkgray: hsl(0, 0%, 76%);
+  --darkred: hsl(350, 100%, 32%);
+  --darkorange: hsl(25, 100%, 32%);
+  --darkyellow: hsl(47, 100%, 36%);
+  --darkgreen: hsl(163, 100%, 24%);
+  --darkblue: hsl(185, 100%, 24%);
 }
 
 /* sass "palette/palette.scss" "palette/palette.css" */
