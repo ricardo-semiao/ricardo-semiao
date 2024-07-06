@@ -1,4 +1,4 @@
-@function adjust-luminance($color, $percentage) {
+@function adjust-luminance($color, $percentage: 0.25) {
   $h: hue($color);
   $s: saturation($color);
   $l: lightness($color) * (1 - $percentage);
@@ -21,11 +21,11 @@ $blue: hsl(185, 100%, 30%);
   --blue: #{$blue};
 
   --darkgray: #{adjust-luminance($gray, .2)};
-  --darkred: #{adjust-luminance($red, .2)};
-  --darkorange: #{adjust-luminance($orange, .2)};
-  --darkyellow: #{adjust-luminance($yellow, .2)};
-  --darkgreen: #{adjust-luminance($green, .2)};
-  --darkblue: #{adjust-luminance($blue, .2)};
+  --darkred: #{adjust-luminance($red, .3)};
+  --darkorange: #{adjust-luminance($orange, .3)};
+  --darkyellow: #{adjust-luminance($yellow, .4)};
+  --darkgreen: #{adjust-luminance($green, .55)};
+  --darkblue: #{adjust-luminance($blue, .5)};
 }
 
 /* Compile with: sass "palette/palette.scss" "palette/palette.css" */

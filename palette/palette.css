@@ -6,11 +6,11 @@
   --green: hsl(163, 100%, 30%);
   --blue: hsl(185, 100%, 30%);
   --darkgray: hsl(0, 0%, 76%);
-  --darkred: hsl(350, 100%, 32%);
-  --darkorange: hsl(25, 100%, 32%);
-  --darkyellow: hsl(47, 100%, 36%);
-  --darkgreen: hsl(163, 100%, 24%);
-  --darkblue: hsl(185, 100%, 24%);
+  --darkred: hsl(350, 100%, 28%);
+  --darkorange: hsl(25, 100%, 28%);
+  --darkyellow: hsl(47, 100%, 27%);
+  --darkgreen: hsl(163, 100%, 13.5%);
+  --darkblue: hsl(185, 100%, 15%);
 }
 
 /* Compile with: sass "palette/palette.scss" "palette/palette.css" */
