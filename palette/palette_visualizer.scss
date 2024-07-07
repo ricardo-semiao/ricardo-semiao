@@ -1,0 +1,55 @@
+body {
+    margin: auto;
+    max-width: calc(200px * 2 + 0.5rem);
+    max-height: calc(200px * 3 + 1rem);
+}
+.grid-container {
+    padding: 1rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+.main {
+    width: calc(100% - 2rem);
+    margin: auto;
+    padding: 16px;
+}
+.light {
+    padding: 0.5rem;
+    margin: auto;
+}
+.light > p {
+    text-align: center;
+    margin: 0 0 0.5rem 0;
+}
+.light > p::before {
+    content: "Texto";
+}
+.aqua  {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+.aqua::before  {
+    content: "1 + 1";
+}
+.dark  {
+    margin: 0.5rem auto 0 auto;
+    padding-top: 10%;
+}
+
+$colors: ("gray", "red", "orange", "yellow", "green", "blue");
+$variations: ("main", "dark", "light", "aqua");
+
+@each $color in $colors {
+    @each $variation in $variations {
+        $name: if($variation == "main", "", $variation);
+        $selector: if($variation == "main", ".", " .");
+        ##{$color}#{$selector}#{$variation} {
+            background-color: var(--#{$name}#{$color});
+        }
+    };
+};
+
+/* Compile with: sass "palette/palette_visualizer.scss" "palette/palette_visualizer.css" --no-source-map */

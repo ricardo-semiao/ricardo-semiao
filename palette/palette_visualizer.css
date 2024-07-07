@@ -1,0 +1,146 @@
+body {
+  margin: auto;
+  max-width: calc(400px + 0.5rem);
+  max-height: calc(600px + 1rem);
+}
+
+.grid-container {
+  padding: 1rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.main {
+  width: calc(100% - 2rem);
+  margin: auto;
+  padding: 16px;
+}
+
+.light {
+  padding: 0.5rem;
+  margin: auto;
+}
+
+.light > p {
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+}
+
+.light > p::before {
+  content: "Texto";
+}
+
+.aqua {
+  text-align: center;
+  margin: auto;
+  width: 80%;
+}
+
+.aqua::before {
+  content: "1 + 1";
+}
+
+.dark {
+  margin: 0.5rem auto 0 auto;
+  padding-top: 10%;
+}
+
+#gray.main {
+  background-color: var(--gray);
+}
+
+#gray .dark {
+  background-color: var(--darkgray);
+}
+
+#gray .light {
+  background-color: var(--lightgray);
+}
+
+#gray .aqua {
+  background-color: var(--aquagray);
+}
+
+#red.main {
+  background-color: var(--red);
+}
+
+#red .dark {
+  background-color: var(--darkred);
+}
+
+#red .light {
+  background-color: var(--lightred);
+}
+
+#red .aqua {
+  background-color: var(--aquared);
+}
+
+#orange.main {
+  background-color: var(--orange);
+}
+
+#orange .dark {
+  background-color: var(--darkorange);
+}
+
+#orange .light {
+  background-color: var(--lightorange);
+}
+
+#orange .aqua {
+  background-color: var(--aquaorange);
+}
+
+#yellow.main {
+  background-color: var(--yellow);
+}
+
+#yellow .dark {
+  background-color: var(--darkyellow);
+}
+
+#yellow .light {
+  background-color: var(--lightyellow);
+}
+
+#yellow .aqua {
+  background-color: var(--aquayellow);
+}
+
+#green.main {
+  background-color: var(--green);
+}
+
+#green .dark {
+  background-color: var(--darkgreen);
+}
+
+#green .light {
+  background-color: var(--lightgreen);
+}
+
+#green .aqua {
+  background-color: var(--aquagreen);
+}
+
+#blue.main {
+  background-color: var(--blue);
+}
+
+#blue .dark {
+  background-color: var(--darkblue);
+}
+
+#blue .light {
+  background-color: var(--lightblue);
+}
+
+#blue .aqua {
+  background-color: var(--aquablue);
+}
+
+/* Compile with: sass "palette/palette_visualizer.scss" "palette/palette_visualizer.css" --no-source-map */
