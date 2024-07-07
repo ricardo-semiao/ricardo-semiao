@@ -3,19 +3,19 @@
   --darkgray: hsl(0, 0%, 75%);
   --red: hsl(350, 100%, 40%);
   --darkred: hsl(350, 100%, 30%);
-  --lightred: hsl(350, 100%, 55%);
+  --lightred: hsl(350, 75%, 50%);
   --orange: hsl(25, 100%, 40%);
   --darkorange: hsl(25, 100%, 30%);
-  --lightorange: hsl(25, 100%, 55%);
+  --lightorange: hsl(25, 75%, 50%);
   --yellow: hsl(47, 100%, 45%);
   --darkyellow: hsl(47, 100%, 35%);
-  --lightyellow: hsl(47, 100%, 60%);
+  --lightyellow: hsl(47, 75%, 55%);
   --green: hsl(163, 100%, 25%);
   --darkgreen: hsl(163, 100%, 15%);
-  --lightgreen: hsl(163, 100%, 40%);
+  --lightgreen: hsl(163, 75%, 35%);
   --blue: hsl(185, 100%, 30%);
   --darkblue: hsl(185, 100%, 20%);
-  --lightblue: hsl(185, 100%, 45%);
+  --lightblue: hsl(185, 75%, 40%);
 }
 
 /* Compile with: sass "palette/palette.scss" "palette/palette.css" */

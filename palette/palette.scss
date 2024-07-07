@@ -1,7 +1,7 @@
-@function adjust-luminance($color, $adjust) {
-  $h: hue($color);
-  $s: saturation($color);
-  $l: lightness($color) + $adjust;
+@function adjust-luminance($color, $hadd: 0, $sadd: 0, $ladd: 0) {
+  $h: hue($color) + $hadd;
+  $s: saturation($color) + $sadd;
+  $l: lightness($color) + $ladd;
   @return hsl($h, $s, $l);
 }
 
@@ -18,8 +18,8 @@ $colors: (
   --darkgray: hsl(0, 0%, 75%);
   @each $name, $value in $colors {
     --#{$name}: #{$value};
-    --dark#{$name}: #{adjust-luminance($value, -10%)};
-    --light#{$name}: #{adjust-luminance($value, +15%)};
+    --dark#{$name}: #{adjust-luminance($value, $ladd: -10%)};
+    --light#{$name}: #{adjust-luminance($value, $sadd: -25%, $ladd: +10%)};
   }
 }
 
