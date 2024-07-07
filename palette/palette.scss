@@ -1,26 +1,40 @@
-@function adjust-luminance($color, $hadd: 0, $sadd: 0, $ladd: 0) {
-  $h: hue($color) + $hadd;
-  $s: saturation($color) + $sadd;
-  $l: lightness($color) + $ladd;
+@function adjust-hsl($color, $add) {
+  $h: hue($color) + nth($add, 1);
+  $s: saturation($color) + nth($add, 2);
+  $l: lightness($color) + nth($add, 3);
   @return hsl($h, $s, $l);
 }
 
 $colors: (
-  "red": hsl(350, 100%, 40%),
-  "orange": hsl(25, 100%, 40%),
-  "yellow": hsl(47, 100%, 45%),
-  "green": hsl(163, 100%, 25%),
-  "blue": hsl(185, 100%, 30%)
+  "red":    hsl(350, 100%, 40%),
+  "orange": hsl(025, 100%, 40%),
+  "yellow": hsl(047, 100%, 45%),
+  "green":  hsl(163, 100%, 25%),
+  "blue":   hsl(185, 100%, 30%)
+);
+
+$adds: (
+  "red":    ("dark": (0, 0, -10%), "light": (0, -30%, 20%), "aqua": (0, -25%, 45%)),
+  "orange": ("dark": (0, 0, -15%), "light": (0, -30%, 20%), "aqua": (0, -20%, 45%)),
+  "yellow": ("dark": (0, 0, -15%), "light": (0, -10%, 25%), "aqua": (0, -15%, 40%)),
+  "green":  ("dark": (0, 0, -10%), "light": (0, -30%, 20%), "aqua": (0, -25%, 55%)),
+  "blue":   ("dark": (0, 0, -15%), "light": (0, -40%, 20%), "aqua": (0, -25%, 50%))
 );
 
 :root {
-  --gray: hsl(0, 0%, 95%);
-  --darkgray: hsl(0, 0%, 75%);
+  --gray:       hsl(0, 0%, 95%);
+  --darkgray:   hsl(0, 0%, 80%);
+  --lightgray:  hsl(0, 0%, 97.5%);
+  --aquagray:  hsl(0, 0%, 98.5%);
+  --blackgray:  hsl(0, 0%, 40%);
+
   @each $name, $value in $colors {
+    $current-adds: map-get($adds, $name);
     --#{$name}: #{$value};
-    --dark#{$name}: #{adjust-luminance($value, $ladd: -10%)};
-    --light#{$name}: #{adjust-luminance($value, $sadd: -25%, $ladd: +10%)};
+    --dark#{$name}:   #{adjust-hsl($value, map-get($current-adds, "dark"))};
+    --light#{$name}:  #{adjust-hsl($value, map-get($current-adds, "light"))};
+    --aqua#{$name}:   #{adjust-hsl($value, map-get($current-adds, "aqua"))};
   }
 }
 
-/* Compile with: sass "palette/palette.scss" "palette/palette.css" */
+/* Compile with: sass "palette/palette.scss" "palette/palette.css" --no-source-map */
