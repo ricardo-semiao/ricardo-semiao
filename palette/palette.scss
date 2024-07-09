@@ -27,6 +27,7 @@ $adds: (
   --lightgray:  hsl(0, 0%, 97.5%);
   --aquagray:  hsl(0, 0%, 98.5%);
   --blackgray:  hsl(0, 0%, 40%);
+  --fontblack: hsl(210, 11%, 15%);
 
   @each $name, $value in $colors {
     $current-adds: map-get($adds, $name);
@@ -38,3 +39,4 @@ $adds: (
 }
 
 /* Compile with: sass "palette/palette.scss" "palette/palette.css" --no-source-map */
+/* Update site's palette with: Copy-Item -Path "palette/palette.css" -Destination "C:\Users\ricar\OneDrive\A-Trabalho\Prog\Personal\ricardo-semiao.github.io\site_assets" */
