@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="$if(lang)$$lang$$else$en$endif$">
+
+
+<head>
+    <!-- Meta -->
+    @@site-meta@@
+
+    <title>$pagetitle$</title>
+
+    $if(description)$<meta name="description" content="$description$" />$endif$
+    <meta name="generator" content="placeholder" />
+
+    <meta property="og:title" content="$pagetitle$" />
+    <meta property="og:type" content="book" />
+    $if(url)$<meta property="og:url" content="$url$" />$endif$
+    $if(cover-image)$<meta property="og:image" content="$url$/$cover-image$" />$endif$
+    $if(description)$<meta property="og:description" content="$description$" />$endif$
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="$pagetitle$" />
+    $if(twitter-handle)$<meta name="twitter:site" content="@$twitter-handle$" />$endif$
+    $if(description)$<meta name="twitter:description" content="$description$" />$endif$
+    $if(cover-image)$<meta name="twitter:image" content="$url$/$cover-image$" />$endif$
+
+    <!-- JS -->
+    $for(header-includes)$
+    $header-includes$
+    $endfor$
+    @@bs4-js@@
+
+    <!-- CSS -->
+    <style type="text/css">
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    </style>
+    $if(csl-css)$
+    <style type="text/css">
+        /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+        div.csl-bib-body { }
+        div.csl-entry {
+            clear: both;
+        $if(csl-entry-spacing)$
+            margin-bottom: $csl-entry-spacing$;
+        $endif$
+        }
+        .hanging div.csl-entry {
+            margin-left:2em;
+            text-indent:-2em;
+        }
+        div.csl-left-margin {
+            min-width:2em;
+            float:left;
+        }
+        div.csl-right-inline {
+            margin-left:2em;
+            padding-left:1em;
+        }
+        div.csl-indent {
+            margin-left: 2em;
+        }
+    </style>
+    $endif$
+
+    $for(css)$
+    <link rel="stylesheet" href="$css$" />
+    $endfor$
+
+    <!-- Custom Assets -->
+    @@site-style@@
+    <link rel="stylesheet" href="assets/rfcd/rfcd_style.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">-->
+</head>
+
+
+<body data-spy="scroll" data-target="#toc">
+
+<!--Header -->
+    @@site-header@@
+    <div class="container-fluid">
+<!--bookdown:title:start-->
+<!--bookdown:title:end-->
+
+<!-- Main Nav -->
+<!--bookdown:toc:start-->
+        <div class="row">
+            @@bs4-mainnav@@
+            <main class="col-sm-12 col-md-9 col-lg-7" id="content">
+$for(include-before)$
+$include-before$
+$endfor$
+<!--bookdown:toc:end-->
+
+<!-- Body -->
+<!--bookdown:body:start-->
+$body$
+<!--bookdown:body:end-->
+$for(include-after)$
+$include-after$
+$endfor$
+            </main>
+
+<!-- Sub Nav -->
+        @@bs4-subnav@@
+        </div>
+    </div> <!-- .container -->
+
+<!-- Footer -->
+    @@rfcd-footer@@
+
+<!-- Scripts -->
+    @@site-scripts@@
+    <script src="assets/rfcd/rfcd_script.js"></script>
+
+$if(math)$
+<!-- dynamically load mathjax for compatibility with self-contained -->
+@@bs4-math@@
+$endif$
+
+</body>
+
+
+</html>
