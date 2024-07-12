@@ -6,12 +6,12 @@ for (f in files) {
   reticulate::py_run_string(glue("
   from template_injector import build
   build(
-    'templates/pkgdown/rspkgdown/assets/{f}_template.html',
+    'templates/rspkgdown/assets/{f}_template.html',
     ['site_assets/components.html',
-    'templates/pkgdown/rspkgdown/assets/rspkgdown_components.html'],
-    'templates/pkgdown/rspkgdown/inst/pkgdown/BS5/templates/{f}.html'
+    'templates/rspkgdown/assets/rspkgdown_components.html'],
+    'templates/rspkgdown/inst/pkgdown/BS5/templates/{f}.html'
   )
   "))
 }
 
-devtools::install("templates/pkgdown/rspkgdown")
+devtools::install("templates/rspkgdown")
