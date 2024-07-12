@@ -2,6 +2,16 @@
 reticulate::py_run_string("
 from template_injector import build
 build(
+  'templates/pkgdown/ricardosemiao/assets/navbar_template.html',
+  ['site_assets/components.html',
+  'templates/pkgdown/ricardosemiao/assets/ricardosemiao_components.html'],
+  'templates/pkgdown/ricardosemiao/inst/pkgdown/BS5/templates/navbar.html'
+)
+")
+
+reticulate::py_run_string("
+from template_injector import build
+build(
   'templates/pkgdown/ricardosemiao/assets/layout_template.html',
   ['site_assets/components.html',
   'templates/pkgdown/ricardosemiao/assets/ricardosemiao_components.html'],
