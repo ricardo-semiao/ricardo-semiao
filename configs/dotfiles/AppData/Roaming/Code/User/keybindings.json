@@ -1,0 +1,35 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+b", // For Markdown files
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && (editorLangId == 'markdown' || editorLangId == 'rmd')",
+        "args": {
+            "snippet": "**${TM_SELECTED_TEXT}**"
+        }
+    },
+    {
+        "key": "ctrl+b", // For LaTeX files
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\textbf{${TM_SELECTED_TEXT}}"
+        }
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && (editorLangId == 'markdown' || editorLangId == 'rmd')",
+        "args": {
+            "snippet": "_${TM_SELECTED_TEXT}_"
+        }
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\textit{${TM_SELECTED_TEXT}}"
+        }
+    }
+]

@@ -1,0 +1,8 @@
+[user]
+	email = ricardo.semiao@outlook.com
+	name = ricardo-semiao
+[core]
+	excludesFile = C:/Users/ricar/.gitignore
+	ignorecase = true
+[init]
+	defaultBranch = main
