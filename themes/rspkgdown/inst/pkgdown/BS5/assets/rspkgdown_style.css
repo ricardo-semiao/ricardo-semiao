@@ -6,6 +6,7 @@ main#pkgdown-content {
 nav.navbar {
     position: static;
     width: calc(205px + 2rem);
+    min-height: 100vh;
     align-items: flex-start;
     padding: 0;
 }
@@ -85,19 +86,4 @@ main#main .page-header {
 }
 main#main h2 {
     margin-top: 2rem;
-}
-
-
-/* Fix footer */
-html, body {
-    height: 100%;
-    margin: 0;
-}
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-main {
-    flex: 1;
 }
