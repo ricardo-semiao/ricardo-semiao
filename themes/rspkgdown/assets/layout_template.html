@@ -5,29 +5,27 @@
 
 <head>
   @@site-meta@@
+
   {{{ head }}}
   {{{ in-header }}}
+
   @@site-style@@
-  <link rel="stylesheet" href="{{#site}}{{root}}{{/site}}rspkgdown_style.css">
 </head>
 
 
 <body>
   @@site-header@@
 
-  <div id="site-main">
-
     <a href="#main" class="visually-hidden-focusable">{{#translate}}{{skip}}{{/translate}}</a>
+
     {{{ before-body }}}
 
-    <main id="pkgdown-content">
+    <div id="site-main">
       {{{ navbar }}}
       <div class="container template-{{template}}">
         {{{ content }}}
       </div>
-    </main>
-
-  </div>
+    </div>
 
   @@rspkgdown-footer@@
 

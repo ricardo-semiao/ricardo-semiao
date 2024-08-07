@@ -9,11 +9,12 @@
   <meta content="Ricardo Semião e Castro" name="Author"/>
   <link href="/site_assets/img/icon.png" rel="icon" type="image/png"/>
   <link href="/site_assets/img/icon.png" rel="shortcut icon" type="image/png"/>
+
   {{{ head }}}
   {{{ in-header }}}
+
   <link href="/site_assets/site_structure.css" rel="stylesheet"/>
   <link href="/site_assets/site_style.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="{{{root}}}rspkgdown_style.css">
 </head>
 
 
@@ -47,23 +48,20 @@
       <div class="header-block"></div>
   </header>
 
-  <div id="site-main">
-
     <a href="#main" class="visually-hidden-focusable">{{#translate}}{{skip}}{{/translate}}</a>
+
     {{{ before-body }}}
 
-    <main id="pkgdown-content">
+    <div id="site-main">
       {{{ navbar }}}
       <div class="container template-{{template}}">
         {{{ content }}}
       </div>
-    </main>
-
-  </div>
+    </div>
 
   <footer id="site-footer">
       <div>
-          <p>Esta página foi feita com <a href="https://pkgdown.r-lib.org/">pkgdown</a>.</p>
+          <p>Page built on <a href="https://pkgdown.r-lib.org/">pkgdown</a>, with <a href="https://github.com/ricardo-semiao/ricardo-semiao/tree/main/themes/rspkgdown">rspkgdown</a> theme.</p>
       </div>
   </footer>
 
