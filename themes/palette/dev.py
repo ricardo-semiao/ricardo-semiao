@@ -1,6 +1,12 @@
 import re
 import colorsys
 
+
+# Compile palette:
+# sass "palette/palette.scss" "palette/palette.css" --no-source-map
+
+
+# Convert palette:
 def format_definecolor(m):
     h, s, l = (int(i) / d for i, d in zip(m.groups()[1:], [360, 100, 100]))
     r, g, b = colorsys.hls_to_rgb(h, l, s)

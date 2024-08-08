@@ -26,6 +26,3 @@
   --lightblue: hsl(185, 60%, 50%);
   --aquablue: hsl(185, 75%, 80%);
 }
-
-/* Compile with: sass "palette/palette.scss" "palette/palette.css" --no-source-map */
-/* Update site's palette with: Copy-Item -Path "palette/palette.css" -Destination "C:\Users\ricar\OneDrive\A-Trabalho\Prog\Personal\ricardo-semiao.github.io\site_assets" */
