@@ -26,3 +26,31 @@ function prompt {
 
     "PS $customPath> "
 }
+
+function NewSymlink {
+	param (
+        [Parameter()][string]$Path,
+        [Parameter()][string]$Target
+    )
+	
+	New-Item -ItemType SymbolicLink -Path $Path -Target $Target
+}
+
+function NewSymlink2 {
+	param (
+		[Parameter()][string]$Start,
+        [Parameter()][string]$Path,
+        [Parameter()][string]$Target,
+        [Parameter()][string]$End,
+        [Parameter()][string]$Base = "C:\Users\ricar\OneDrive\A-Trabalho\Prog"
+    )
+
+	$Path = "$Base\$Start\$Path\$End"
+	$Target = "$Base\$Start\$Target\$End"
+
+    Write-Host "Creating symbolic link:"
+    Write-Host "Path: $Path"
+    Write-Host "Trgt: $Target"
+
+	New-Item -ItemType SymbolicLink -Path $Path -Target $Target
+}
