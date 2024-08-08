@@ -44,6 +44,17 @@
 .header-section-number {
   color: var(--blackgray);
 }
+button.btn.btn-outline-primary {
+  margin: 0 !important;
+  width: 35px;
+  height: 29px;
+  background-image: url('data:image/svg+xml;utf8,<svg width="800px" height="800px" viewBox="0 0 72 72" id="emoji" xmlns="http://www.w3.org/2000/svg"><g id="line"><line x1="12" x2="62" y1="19" y2="19" fill="none" stroke="%23004d37" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"/><line x1="12" x2="62" y1="36" y2="36" fill="none" stroke="%23004d37" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"/><line x1="12" x2="62" y1="53" y2="53" fill="none" stroke="%23004d37" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"/></g></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  border-color: var(--green);
+}
 
 
 /* Code */

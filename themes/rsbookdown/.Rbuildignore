@@ -1,3 +1,4 @@
 ^rsbookdown\.Rproj$
 ^\.Rproj\.user$
 ^dev\.R
+^raw$
