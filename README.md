@@ -74,5 +74,5 @@
 </div>
 
 <div align="center">
-    <p>The <a href="https://github.com/ricardo-semiao/ricardo-semiao">ricardo-semiao</a> repository contains my personal themes and tools.</p>
+    <p>The <a href="https://github.com/ricardo-semiao/ricardo-semiao">ricardo-semiao</a> repository contains my personal themes and tools, see each folder's read-me.</p>
 </div>
