@@ -5,12 +5,12 @@ This is the Themes folder of my personal repository. Below, I list its contents.
 The file [components.html](components.html) is a hardlink of the [components file](https://github.com/ricardo-semiao/ricardo-semiao.github.io/blob/main/site_assets/components.html) used to build my personal site. It is refered to by "rspkgdown" and "rsbookdown".
 
 
-## office
+## [office](themes\office)
 
 This folder contains my Microsoft Office templates.
 
 
-## palette
+## [palette](themes\palette)
 
 This folder contains my personal palette, lightly inspired in ColorBrewer's "Dark 2".
 
@@ -21,14 +21,14 @@ The palette can be visualized with a toy HTML script.
 The original CSS palette is converted to other languages, such as TEX, via the "dev.py" script.
 
 
-## rspkgdown
+## [rspkgdown](themes\rspkgdown)
 
 A custom [R pkgdown](https://pkgdown.r-lib.org/) template that morphs into my personal website. It is currently used to build the site for my packages [varr](https://ricardo-semiao.github.io/varr/) and [morphdown](https://ricardo-semiao.github.io/morphdown/).
 
 The layout HTML/pandoc scripts are injected using my "template_injector" package.
 
 
-## rsbookdown
+## [rsbookdown](themes\rsbookdown)
 
 A custo [R bookdown](https://bookdown.org/) template that morphs into my personal website. It is currently used to build the site for my [RFCD](https://ricardo-semiao.github.io/RFCD/) book.
 

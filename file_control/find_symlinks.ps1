@@ -15,8 +15,7 @@ foreach ($dir in $directories) {
     $items += Get-ChildItem -Path $dir -Recurse
 }
 
-$symlinks = $items | Where-Object { $_.LinkType -eq "SymbolicLink" }
-
+$symlinks = $items | Where-Object { $_.LinkType -eq "SymbolicLink" -or $_.LinkType -eq "HardLink" }
 
 $results = @("Functioning, Path, Target")
 $incorrects = 0
