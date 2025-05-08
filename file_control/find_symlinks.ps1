@@ -15,7 +15,7 @@ foreach ($dir in $directories) {
     $items += Get-ChildItem -Path $dir -Recurse
 }
 
-$symlinks = $items | Where-Object { $_.LinkType -eq "SymbolicLink" -or $_.LinkType -eq "HardLink" }
+$symlinks = $items | Where-Object { $_.LinkType -eq "SymbolicLink" } # -or $_.LinkType -eq "HardLink"
 
 $results = @("Functioning, Path, Target")
 $incorrects = 0
@@ -29,7 +29,7 @@ foreach ($sym in $symlinks) {
     $results += "$targetExists, $fullName, $target"
 }
 
-$results | Out-File -FilePath "texts/symlinks.csv"
+$results | Out-File -FilePath "file_control\texts\symlinks.csv"
 
 $len = $results.Length-1
-Write-Output "$len symlinks found, $incorrects incorrect ones. Result in 'texts/symlinks.csv'."
+Write-Output "$len symlinks found, $incorrects incorrect ones. Result in 'file_control\texts\symlinks.csv'."

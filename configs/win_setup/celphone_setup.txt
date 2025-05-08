@@ -1,0 +1,15 @@
+Sociais: zap, insta, face, disc, X, linkedin, tiktok, spotfy, steam
+Call: meet, zoom, teams
+FGV: FGV carteirinha
+Transporte: uber, 99, futuris portaria
+Mail: outlook, microsoft auth, google auth, OneDrive, vincular ao windows, google photos
+Stream: netflix, disney, amazon, prime, twitch
+Documentos: cnh, RG, poupatempo, etitulo, gov.br
+Tools: Notion, Office, toggl, GPhotos
+Others: Galaxy wear, phone link
+Food: Burger king, popeyes, macdonalds
+Banco: itaú iti. Não: itaú personalité, itaú cartões, samsung pass
+Gov: cnh. Não: gov.br, poupatempo, e-titulo, rg
+
+p1:
+hora/temp
