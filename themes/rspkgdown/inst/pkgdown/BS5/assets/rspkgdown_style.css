@@ -103,3 +103,10 @@ footer#site-footer {
 #dropdown-articles {
     color: var(--green);
 }
+
+/* Foldable code */
+.scroll-code {
+    max-height: 370px;
+    overflow-y: auto;
+    background-color: inherit;
+  }
