@@ -1,9 +1,15 @@
-// Place your key bindings in this file to override the defaults
 [
+//#region Others ---------------------------------------------------------------
+    {
+    "key": "ctrl+k v",
+    "command": "markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown' | editorLangId == 'quarto'"
+    },
+//#region Emphasis -------------------------------------------------------------
     {
         "key": "ctrl+b", // For Markdown files
         "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && (editorLangId == 'markdown' || editorLangId == 'rmd')",
+        "when": "editorTextFocus && (editorLangId == 'markdown' || editorLangId == 'rmd' || editorLangId == 'quarto')",
         "args": {
             "snippet": "**${TM_SELECTED_TEXT}**"
         }
@@ -19,7 +25,7 @@
     {
         "key": "ctrl+shift+i",
         "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && (editorLangId == 'markdown' || editorLangId == 'rmd')",
+        "when": "editorTextFocus && (editorLangId == 'markdown' || editorLangId == 'rmd' || editorLangId == 'quarto')",
         "args": {
             "snippet": "_${TM_SELECTED_TEXT}_"
         }
@@ -31,5 +37,213 @@
         "args": {
             "snippet": "\\textit{${TM_SELECTED_TEXT}}"
         }
+    },
+    {
+        "key": "ctrl+alt+c",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "<!--$1-->"
+        }
+    },
+    {
+        "key": "ctrl+alt+p",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "[]()<!--$1-->"
+        }
+    },
+//#region Removed Binds --------------------------------------------------------
+    {
+        "key": "ctrl+oem_2",
+        "command": "-editor.action.accessibleViewAcceptInlineCompletion",
+        "when": "accessibleViewIsShown && accessibleViewCurrentProviderId == 'inlineCompletions'"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+alt+oem_period",
+        "command": "-editor.action.autoFix",
+        "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
+    },
+    {
+        "key": "shift+alt+h",
+        "command": "-references-view.showCallHierarchy",
+        "when": "editorHasCallHierarchyProvider"
+    },
+    {
+        "key": "ctrl+f2",
+        "command": "-editor.action.changeAll",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+k m",
+        "command": "-workbench.action.editor.changeLanguageMode",
+        "when": "!notebookEditorFocused"
+    },
+    {
+        "key": "alt+f5",
+        "command": "-chatEditor.action.navigateNext",
+        "when": "chatEdits.hasEditorModifications && chatIsEnabled && editorFocus && !chatEdits.isRequestInProgress"
+    },
+    {
+        "key": "shift+alt+f5",
+        "command": "-chatEditor.action.navigatePrevious",
+        "when": "chatEdits.hasEditorModifications && chatIsEnabled && editorFocus && !chatEdits.isRequestInProgress"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-workbench.action.chat.applyInEditor",
+        "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat && !inChatInput"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-workbench.action.chat.insertCodeBlock",
+        "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat && !inChatInput"
+    },
+    {
+        "key": "ctrl+alt+enter",
+        "command": "-workbench.action.chat.runInTerminal",
+        "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-chatEditor.action.accept",
+        "when": "chatEdits.hasEditorModifications && editorFocus && !chatEdits.isRequestInProgress"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-chatEditor.action.acceptHunk",
+        "when": "chatEdits.hasEditorModifications && editorFocus && !chatEdits.isRequestInProgress"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-workbench.action.chat.newChat",
+        "when": "chatIsEnabled && inChat && !config.chat.unifiedChatView && chatLocation != 'editing-session'"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-workbench.action.chat.newEditSession",
+        "when": "chatEditingParticipantRegistered && chatIsEnabled && inChat"
+    },
+    {
+        "key": "ctrl+alt+pagedown",
+        "command": "-workbench.action.chat.nextCodeBlock",
+        "when": "chatIsEnabled && inChat"
+    },
+    {
+        "key": "ctrl+f9",
+        "command": "-workbench.action.chat.nextFileTree",
+        "when": "chatIsEnabled && inChat"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "-workbench.action.chat.open",
+        "when": "!chatSetupHidden"
+    },
+    {
+        "key": "ctrl+alt+pageup",
+        "command": "-workbench.action.chat.previousCodeBlock",
+        "when": "chatIsEnabled && inChat"
+    },
+    {
+        "key": "ctrl+shift+f9",
+        "command": "-workbench.action.chat.previousFileTree",
+        "when": "chatIsEnabled && inChat"
+    },
+    {
+        "key": "ctrl+oem_period",
+        "command": "-workbench.action.chat.toggleAgentMode",
+        "when": "chatHasToolsAgent && chatIsEnabled && inChatInput && inUnifiedChat && !chatSessionRequestInProgress || chatHasToolsAgent && chatIsEnabled && inChatInput && !chatSessionRequestInProgress && chatLocation == 'editing-session' || chatIsEnabled && config.chat.unifiedChatView && inChatInput && inUnifiedChat && !chatSessionRequestInProgress || chatIsEnabled && config.chat.unifiedChatView && inChatInput && !chatSessionRequestInProgress && chatLocation == 'editing-session'"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "-workbench.action.chat.startVoiceChat",
+        "when": "chatIsEnabled && hasSpeechProvider && inChatInput && !chatSessionRequestInProgress && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress || chatIsEnabled && hasSpeechProvider && inlineChatFocused && !chatSessionRequestInProgress && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress"
+    },
+    {
+        "key": "escape",
+        "command": "-workbench.action.chat.stopListening",
+        "when": "voiceChatInProgress && scopedVoiceChatInProgress == 'editor' || voiceChatInProgress && scopedVoiceChatInProgress == 'inline' || voiceChatInProgress && scopedVoiceChatInProgress == 'quick' || voiceChatInProgress && scopedVoiceChatInProgress == 'view'"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "-workbench.action.chat.stopListeningAndSubmit",
+        "when": "inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'editor' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'inline' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'quick' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'view' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'editor' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'inline' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'quick' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'view'"
+    },
+    {
+        "key": "escape",
+        "command": "-workbench.action.speech.stopReadAloud",
+        "when": "scopedChatSynthesisInProgress && textToSpeechInProgress"
+    },
+    {
+        "key": "ctrl+alt+oem_period",
+        "command": "-workbench.action.chat.switchToNextModel",
+        "when": "chatIsEnabled && inChatInput"
+    },
+    {
+        "key": "ctrl+backspace",
+        "command": "-chatEditor.action.reject",
+        "when": "chatEdits.hasEditorModifications && editorFocus && !chatEdits.isRequestInProgress"
+    },
+    {
+        "key": "ctrl+shift+backspace",
+        "command": "-chatEditor.action.undoHunk",
+        "when": "chatEdits.hasEditorModifications && editorFocus && !chatEdits.isRequestInProgress"
+    },
+    {
+        "key": "ctrl+alt+oem_2",
+        "command": "-workbench.command.prompts.use",
+        "when": "chatIsEnabled && config.chat.promptFiles"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "-workbench.action.closeWindow"
+    },
+    {
+        "key": "alt+f4",
+        "command": "-workbench.action.closeWindow"
+    },
+    {
+        "key": "alt+f10",
+        "command": "-editor.action.nextCommentedRangeAction",
+        "when": "activeEditorHasCommentingRange"
+    },
+    {
+        "key": "ctrl+k ctrl+alt+down",
+        "command": "-editor.action.nextCommentingRange",
+        "when": "accessibilityModeEnabled && commentFocused || accessibilityModeEnabled && editorFocus || accessibilityHelpIsShown && accessibilityModeEnabled && accessibleViewCurrentProviderId == 'comments'"
+    },
+    {
+        "key": "shift+alt+f10",
+        "command": "-editor.action.previousCommentedRangeAction",
+        "when": "activeEditorHasCommentingRange"
+    },
+    {
+        "key": "ctrl+k ctrl+alt+up",
+        "command": "-editor.action.previousCommentingRange",
+        "when": "accessibilityModeEnabled && commentFocused || accessibilityModeEnabled && editorFocus || accessibilityHelpIsShown && accessibilityModeEnabled && accessibleViewCurrentProviderId == 'comments'"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-csv.preview",
+        "when": "editorLangId == 'csv'"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-csv.preview",
+        "when": "editorLangId == 'tsv'"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-csv.preview",
+        "when": "editorLangId == 'csv (semicolon)'"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-csv.preview",
+        "when": "editorLangId == 'csv (pipe)'"
     }
 ]

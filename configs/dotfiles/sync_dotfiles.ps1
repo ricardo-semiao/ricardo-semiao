@@ -1,10 +1,10 @@
 $sourceDir = "C:/Users/ricar"
-$dotfilesRepo = "C:/Users/ricar/OneDrive/A-Trabalho/Prog/Personal/ricardo-semiao/configs/dotfiles"
+$dotfilesRepo = "C:/Users/ricar/OneDrive/A-Trabalho/Prog/ricardo-semiao/configs/dotfiles"
 
 $itemNames = @(
     ".gitconfig",
     ".gitignore",
-    ".stata_kernel.conf",
+    ".radian_profile",
     "Documents/WindowsPowerShell",
     "AppData/Roaming/Code/User/keybindings.json",
     "AppData/Roaming/Code/User/settings.json",

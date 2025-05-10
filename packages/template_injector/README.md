@@ -8,6 +8,7 @@ The basics of its functioning is as below:
 - The module looks for `@@component-name@@` entries in a template HTML file, and injects the matching component's div content in their place.
 
 Some technical aspects:
+
 - The injection is done with regular expressions via `re.sub`.
 - The HTML of the components is parsed with BeautifulSoup.
 - The injected output is prettified using `yattag.indent`.
