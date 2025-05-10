@@ -9,7 +9,7 @@ book_pages = [
 
 #external_links = ['"/site_assets/img/icon.png"', '"/site_assets/img/icon.png"', '"/site_assets/site_structure.css"', '"/site_assets/site_style.css"', '"/cv.html"', '"/course-rfcd/"', '"/course-ccia/"', '"/course-paaml/"', '"/mtsdesc/"', '"/phyopt/"', '"/morphdown/"', '"/site_assets/site_structure.js"']
 
-with open("assets/template/rsquartobook_html.template", "r", encoding="utf-8") as f:
+with open("assets/rsquartobook/rsqb_html.template", "r", encoding="utf-8") as f:
     content = f.readlines()
     ext_links = [re.findall(r'"(/[^"]*)"', line) for line in content]
     ext_links = [matches[0] for matches in ext_links if matches]

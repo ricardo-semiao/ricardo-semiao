@@ -33,7 +33,7 @@ $endif$
 
     <link href="/site_assets/site_structure.css" rel="stylesheet"/>
     <link href="/site_assets/site_style.css" rel="stylesheet"/>
-    <link href="assets/template/site_style.css" rel="stylesheet"/>
+    <link href="assets/rsquartobook/rsqb_style.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -128,6 +128,7 @@ $endfor$
         </div>
     </footer>
     <script src="/site_assets/site_structure.js"></script>
+    <script src="assets/rsquartobook/rsqb_script.js"></script>
 
 </body>
 
