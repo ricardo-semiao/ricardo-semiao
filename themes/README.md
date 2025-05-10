@@ -37,6 +37,11 @@ The layout HTML/mustache scripts are injected using my "template_injector" packa
 Bookdown does not natively support package templates, so this is just a package that copies the assets in a specific folder. In the future, I'll make a function to update the "_output.yml" file too.
 
 
+## [rsquartobook](themes\rsquartobook)
+
+A custom quarto book template that morphs into my personal website. It has the additional [adust_links.py](themes\rsquartobook\template\adust_links.py) file that ensures that the links referring to the site's root directory aren't replaced by the book's root directory (i.e. turns `./some/link/at/the/template` back to `/some/link/at/the/template`).  
+
+
 ## Future Projects
 
 In the future, I intent to create lots of templates for lots of tools such as: R's ggplot2, TEX, Quarto (book, presentations, etc.).

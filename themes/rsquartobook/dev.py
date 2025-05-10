@@ -1,7 +1,7 @@
 from template_injector import build
 
 build(
-    'themes/rsquartobook/rsquartobook_template.html',
-    ['themes/components.html', 'themes/rsquartobook/rsquartobook_components.html'],
-    'themes/rsquartobook/template/rsquartobook_html.template'
+    'themes/rsquartobook/rsqb_template.html',
+    ['themes/site_components.html', 'themes/rsquartobook/rsqb_components.html'],
+    'themes/rsquartobook/assets/rsquartobook/rsqb_html.template'
 )
