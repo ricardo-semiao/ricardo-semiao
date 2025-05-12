@@ -1,5 +1,7 @@
+library(devtools)
 library(glue)
 
+# Building templates
 files <- c("head", "layout") #, "navbar"
 
 for (f in files) {
@@ -14,10 +16,13 @@ for (f in files) {
   "))
 }
 
+
+# Copying assets to package folders
 file.copy(
   "themes/rspkgdown/assets/rspg_style.css",
   "themes/rspkgdown/inst/pkgdown/BS5/assets/rspg_style.css",
   overwrite = TRUE
 )
 
-devtools::install("themes/rspkgdown")
+# Building package
+install("themes/rspkgdown")
