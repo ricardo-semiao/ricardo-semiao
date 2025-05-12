@@ -1,5 +1,3 @@
-ricardo-semiao.code-workspace
-.Rproj.user
-site_assets
-file_control/texts
+site_assets/
+file_control/output/
 configs/setup/phone_setup.md
