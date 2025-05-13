@@ -4,7 +4,6 @@ Title: Ricardo Semião's Pkgdown Template
 Version: 0.0.0.9000
 Authors@R: 
     person("Ricardo", "Semião", , "ricardo.semiao@outlook.com", role = c("aut", "cre"))
-Maintainer: Ricardo Semião e Castro <ricardo.semiao@outlook.com>
 Description: Ricardo Semião's Pkgdown Template
 Encoding: UTF-8
 LazyData: true

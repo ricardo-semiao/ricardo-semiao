@@ -50,6 +50,7 @@ if (FALSE) {
   #use_data_raw(); use_data()
 }
 
+# Styling
 if (FALSE) {
   styling_report <- styler::style_pkg(
     scope = "line_breaks",
@@ -73,7 +74,7 @@ if (FALSE) {
   # Git:
   use_git()
   git_vaccinate()
-  use_github_action_check_standard() #use_github_action()
+  use_github_action("check-standard")
 
   # Document:
   use_roxygen_md()
@@ -101,7 +102,6 @@ if (FALSE) {
   #add `@importFrom mathjaxr preview_rd` somewhere
 }
 
-
 # Package imports
 depends <- c("rlang", "purrr")
 imports <- c("cli", "glue", "mathjaxr")
@@ -113,7 +113,6 @@ if (FALSE) {
   use_package_min(suggests, "Suggests")
   use_package("R", type = "Depends", min_version = "4.3")
 }
-
 
 # Function imports
 use_import_from("glue", "glue")
