@@ -9,6 +9,7 @@ This is the File Control folder of my personal repository. Here I have `.ps1` sc
 
 ## Creating
 
+- [update_projects.ps1](file_control\creation\update_projects.ps1): Many of my projects depend on the themes this repository and the CSS/JS in [ricardo-semiao.github.io](https://github.com/ricardo-semiao/ricardo-semiao.github.io). When these are updated, I sometimes need to update the projects too. This script globally access that list of projects, re-render them, and pushes the changes to GitHub. In the future I want to include a stashing functionality to restore initial states if the changes are not wanted.
 - [create_recursive_hardlink.ps1](file_control\creation\create_recursive_hardlink.ps1): Creates hard links recursively, preserving folder structure.
 - [create_url_file.ps1](file_control\creation\create_url_file.ps1): Generates `.url` files from given URLs.
 - [save_folder_structure.ps1](file_control\creation\save_folder_structure.ps1): Saves the folder structure of a directory to a CSV file.
