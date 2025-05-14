@@ -4,8 +4,7 @@ Title: Ricardo Semião's Bookdown Template
 Version: 0.0.0.9000
 Authors@R: 
     person("Ricardo", "Semião", , "ricardo.semiao@outlook.com", role = c("aut", "cre"))
-Maintainer: Ricardo Semião e Castro <ricardo.semiao@outlook.com>
 Description: Ricardo Semião's Bookdown Template
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2

@@ -15,8 +15,8 @@ build(
 # Compiling sass to package folder
 system(paste(
   "sass",
-  "'themes/rsbookdown/assets/style_scss.scss'",
-  "'themes/rsbookdown/inst/bookdown/assets/rsbd_style.css'",
+  "themes/rsbookdown/assets/style_scss.scss",
+  "themes/rsbookdown/inst/bookdown/assets/rsbd_style.css",
   "--no-source-map"
 ))
 
