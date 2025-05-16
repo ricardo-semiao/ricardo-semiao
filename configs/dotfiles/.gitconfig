@@ -4,5 +4,14 @@
 [core]
 	excludesFile = C:/Users/ricar/.gitignore
 	ignorecase = true
+	editor = code --wait
 [init]
 	defaultBranch = main
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED

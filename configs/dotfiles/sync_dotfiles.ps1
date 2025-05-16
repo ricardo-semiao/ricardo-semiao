@@ -6,6 +6,8 @@ $itemNames = @(
     ".gitignore",
     ".radian_profile",
     "Documents/WindowsPowerShell",
+    "Documents/PowerShell",
+    "AppData/Roaming/Code/User/snippets",
     "AppData/Roaming/Code/User/keybindings.json",
     "AppData/Roaming/Code/User/settings.json",
     "AppData/Roaming/RStudio/config.json",

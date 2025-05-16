@@ -1,82 +1,191 @@
 {
+//#region General and Small Extensions -----------------------------------------
+    // UI:
+    "workbench.colorTheme": "Kimbie Dark",
+    "workbench.tree.indent": 16,
+    "editor.minimap.renderCharacters": false,
+    // General:   
+    "window.restoreWindows": "none",
+    "workbench.startupEditor": "none",
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    // Source control:
+    "git.enableSmartCommit": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    // Other Extensions:
+    "liveServer.settings.donotShowInfoMsg": true,
+    "markdownlint.config": {
+        "MD012": false,
+        "MD007": {"indent": 4}
+    },
+    // Spell check:
+    "cSpell.checkOnlyEnabledFileTypes": true,
+    "cSpell.language": "pt-BR,en",
+    "cSpell.enabledFileTypes": {
+        "rmd": true, "markdown": true, "quarto": true, "tex": true,
+        "r": true, "python": true, "julia": true
+    },
+    "cSpell.languageSettings": [
+        {
+            "languageId": "r,python,julia",
+            "includeRegExpList": [
+                "/#.*/",
+                "/('''|\"\"\")[^\\1]+?\\1/g"
+            ]
+        }
+    ],
+    "cSpell.userWords": [
+        "autocorrelations", "booleano", "booleanos", "Estacionariedade", "macroeconometrics",
+        "metaprogramação", "orthogonalization", "quista", "Semião"
+    ],
+//endregion
+//#region Launch Profiles ------------------------------------------------------
+    "launch": {
+        "configurations": [
+            {
+                "name": "Python (ricar)",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal",
+                "justMyCode": false
+            }
+        ],
+        "compounds": []
+    },
+//#endregion
+//#region Language Configs -----------------------------------------------------
+    // Global:
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    // Language-specific:
+    "[r][python][julia]": {
+        "editor.rulers": [80]
+    },
+    "[r]": {
+        "editor.tabSize": 2
+    },
+    "[markdown][quarto][rmd]": {
+        "editor.wordWrap": "on"
+    },
+    "[powershell]": {
+        "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+        "editor.semanticHighlighting.enabled": false,
+        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+    },
+    // R:
+    "r.bracketedPaste": true,
+    "r.alwaysUseActiveTerminal": true,
+    "r.plot.useHttpgd": true,
+    "r.removeLeadingComments": true,
+    "r.rterm.windows": "C:\\Python310\\Scripts\\radian.exe",
+    "r.rpath.windows": "C:\\Program Files\\R\\R-4.4.2\\bin\\x64\\r.exe",
+    // Python:
+    "jupyter.debugJustMyCode": false,
+    "debugpy.debugJustMyCode": false,
+    "python.createEnvironment.trigger": "off",
+    "python.REPL.sendToNativeREPL": true,
+    // Julia:
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": true,
+    "julia.enableCrashReporter": true,
+//#endregion
+//#region Terminal -------------------------------------------------------------
+    // General configurations:
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "terminal.integrated.smoothScrolling": true,
+    // Profiles:
+    "terminal.integrated.defaultProfile.windows": "PowerShell 7",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell 7": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "R (radian)": {
+            "path": ["C:\\Python310\\Scripts\\radian.exe"],
+            "args": [],
+            "icon": "terminal"
+        },
+        "Python": {
+            "path": ["C:\\Python310\\python.exe"],
+            "args": ["-i"],
+            "icon": "python"
+        },
+        "Julia": {
+            "path": ["C:\\Users\\ricar\\AppData\\Local\\Programs\\Julia-1.10.5\\bin\\julia.exe"],
+            "args": ["-i"],
+            "icon": "activate-breakpoints"
+        },
+        "PowerShell 5.1": {
+            "path": ["C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"],
+            "icon": "terminal-powershell"
+        },
+        "JavaScript Debug Terminal": null,
+        "Spell Checker REPL": null,
+        "Git Bash": null,
+        "Command Prompt": null,
+        "PowerShell": null,
+        "R Terminal": null
+    },
+//#endregion
+//#region Git and Copilot ------------------------------------------------------
+    // General configs:
+    "git.confirmSync": false,
+    "github.copilot.enable": {
+        "*": true
+    },    
+    // Prompts:
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+          "text": "Always follow the main commit line with an empty line and a list of items further describing the changes."
+        }
+    ],
+    "github.copilot.chat.codeGeneration.instructions": [
+        {
+        "text": "When adding yaml opptions, start and end with `---`. Keep in mind that yaml variables are often separated by hiphens.",
+        },
+        {
+        "text": "When altering code chunks, do not override the chunk borders '```'.",
+        },
+        {
+        "text": "When adding latex or html to markdown documents, add them raw, without chunk borders'```'.",
+        }
+        //{
+        //"text": "When writing latex math, always and only use `$` or `$$` as the math mode delimiters.",
+        //},
+        //{
+        //"text": "When writing latex math, always and only use one or more '~' as spacers.",
+        //},
+        //{
+        //"text": "When writing latex math in the chat, always and only add raw latex with the `$` delimiter.",
+        //}
+    ],
+//#endregion
 //#region Latex ----------------------------------------------------------------
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.latex.recipes": [
         {
             "name": "latexmk (pdflatex)",
-            "tools": [
-                "latexmk"
-            ]
-        },
-        {
-            "name": "latexmk (latexmkrc)",
-            "tools": [
-                "latexmk_rconly"
-            ]
+            "tools": ["latexmk"]
         },
         {
             "name": "latexmk (lualatex)",
-            "tools": [
-                "lualatexmk"
-            ]
+            "tools": ["lualatexmk"]
         },
         {
             "name": "latexmk (xelatex)",
-            "tools": [
-                "xelatexmk"
-            ]
+            "tools": ["xelatexmk"]
         },
+        // Other engines: `latexmk_rconly`, `tectonic`, `pdflatex`
         {
             "name": "pdflatex > bibtex > pdflatex * 2",
-            "tools": [
-                "pdflatex",
-                "bibtex",
-                "pdflatex",
-                "pdflatex"
-            ]
-        },
-        {
-            "name": "pdflatex > biber > pdflatex * 2",
-            "tools": [
-                "pdflatex",
-                "biber",
-                "pdflatex",
-                "pdflatex"
-            ]
-        },
-        {
-            "name": "Compile Rnw files",
-            "tools": [
-                "rnw2tex",
-                "latexmk"
-            ]
-        },
-        {
-            "name": "Compile Jnw files",
-            "tools": [
-                "jnw2tex",
-                "latexmk"
-            ]
-        },
-        {
-            "name": "Compile Pnw files",
-            "tools": [
-                "pnw2tex",
-                "latexmk"
-            ]
-        },
-        {
-            "name": "tectonic",
-            "tools": [
-                "tectonic"
-            ]
-        },
-        {
-            "name": "pdflatex",
-            "tools": [
-                "pdflatex"
-            ]
+            "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
         }
+        // Other bib engines: `biber`
     ],
     "latex-workshop.latex.tools": [
         {
@@ -214,142 +323,8 @@
         }
     ],
 //#endregion
-//#region Launch Profiles ------------------------------------------------------
-    "launch": {
-        "configurations": [
-            {
-                "name": "Python (ricar)",
-                "type": "debugpy",
-                "request": "launch",
-                "program": "${file}",
-                "console": "integratedTerminal",
-                "justMyCode": false
-            }
-        ],
-        "compounds": []
-    },
-//#endregion
-//#region Language Configs -----------------------------------------------------
-    //#region ------ Global
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4,
-    //"editor.detectIndentation": true,
-    "editor.rulers": [80],
-    "editor.wordWrap": "on",
-    "editor.minimap.enabled": false,
-    //#endregion
-    //#region ------ R
-    "r.bracketedPaste": true,
-    "r.alwaysUseActiveTerminal": true,
-    "r.plot.useHttpgd": true,
-    "r.removeLeadingComments": true,
-    "r.rterm.windows": "C:\\Python310\\Scripts\\radian.exe",
-    "r.rpath.windows": "C:\\Program Files\\R\\R-4.4.2\\bin\\x64\\r.exe",
-    "[r]": {
-        "editor.tabSize": 2
-    },
-    //"r.editor.bracesOnNewLine": true,
-    //"r.lsp.path": "C:\\Program Files\\R\\R-4.4.2\\bin\\x64\\r.exe",
-    //#endregion
-    //#region ------ Python
-    "jupyter.debugJustMyCode": false,
-    "debugpy.debugJustMyCode": false,
-    //#endregion
-    //#region ------ Julia
-    "terminal.integrated.commandsToSkipShell": [
-        "language-julia.interrupt"
-    ],
-    "julia.symbolCacheDownload": true,
-    "julia.enableTelemetry": true,
-    //#endregion
-//#endregion
-//#region General --------------------------------------------------------------
-    "workbench.colorTheme": "Kimbie Dark",
-    "security.workspace.trust.untrustedFiles": "open",
-    "workbench.startupEditor": "none",
-    "explorer.confirmDragAndDrop": false,
-    // Source control:
-    "git.enableSmartCommit": false,
-    "diffEditor.ignoreTrimWhitespace": false,
-    // Terminal:
-    "terminal.integrated.enableMultiLinePasteWarning": "never",
-    "terminal.integrated.smoothScrolling": true,
-
-    // Spell check:
-    "cSpell.enableFiletypes": [
-        "r",
-        "rmd"
-    ],
-    "cSpell.language": "pt-BR,en",
-    "cSpell.userWords": [
-        "autocorrelations",
-        "booleano",
-        "booleanos",
-        "Estacionariedade",
-        "macroeconometrics",
-        "metaprogramação",
-        "orthogonalization",
-        "quista",
-        "Semião"
-    ],
-//endregion
-//#region Copilot --------------------------------------------------------------
-    // Copilot:
-    "github.copilot.chat.commitMessageGeneration.instructions": [
-        {
-          "text": "Always follow the main commit line with an empty line and a list of items further describing the changes."
-        }
-    ],
-    "github.copilot.chat.codeGeneration.instructions": [
-        {
-        "text": "When adding yaml opptions, start and end with `---`. Keep in mind that yaml variables are often separated by hiphens.",
-        },
-        {
-        "text": "When altering code chunks, do not override the chunk borders '```'.",
-        },
-        {
-        "text": "When adding latex or html to markdown documents, add them raw, without chunk borders'```'.",
-        }
-        //{
-        //"text": "When writing latex math, always and only use `$` or `$$` as the math mode delimiters.",
-        //},
-        //{
-        //"text": "When writing latex math, always and only use one or more '~' as spacers.",
-        //},
-        //{
-        //"text": "When writing latex math in the chat, always and only add raw latex with the `$` delimiter.",
-        //}
-    ],
-    "git.confirmSync": false,
-    "window.restoreWindows": "none",
-    "python.createEnvironment.trigger": "off",
-    "terminal.integrated.profiles.windows": {
-        "PowerShell": {
-            "source": "PowerShell",
-            "icon": "terminal-powershell"
-        },
-        "Command Prompt": {
-            "path": [
-                "${env:windir}\\Sysnative\\cmd.exe",
-                "${env:windir}\\System32\\cmd.exe"
-            ],
-            "args": [],
-            "icon": "terminal-cmd"
-        },
-        "Git Bash": {
-            "source": "Git Bash"
-        }
-    },
-    "python.REPL.sendToNativeREPL": true,
-    "github.copilot.enable": {
-        "quarto": true
-    },
-    "explorer.confirmDelete": false
-    //"github.copilot.enable": {
-    //    "quarto": false,
-    //    "*": true
-    //},
-//#endregion
 //#region Uncategorized --------------------------------------------------------
+    "placeholder": false,
+    "window.newWindowProfile": "Default",
 //#endregion
 }
