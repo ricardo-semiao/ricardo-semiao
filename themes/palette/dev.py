@@ -1,12 +1,21 @@
+
+# Setup
 import re
 import colorsys
-
 
 # Compile palette:
 # sass "palette/palette.scss" "palette/palette.css" --no-source-map
 
 
-# Convert palette:
+# Read CSS and get matches:
+with open("themes/palette/palette.css", "r") as file_in:
+    palette_raw = file_in.read()
+
+pattern = r"--([a-z]+): hsl\(([0-9]+), ([0-9]+)%, ([0-9]+)%\);"
+matches = list(re.finditer(pattern, palette_raw))
+
+
+# Convert to Tex:
 def format_definecolor(m):
     h, s, l = (int(i) / d for i, d in zip(m.groups()[1:], [360, 100, 100]))
     r, g, b = colorsys.hls_to_rgb(h, l, s)
@@ -14,15 +23,24 @@ def format_definecolor(m):
     #hex = f"{int(r * 255):02x}{int(g * 255):02x}{int(b * 255):02x}"
     #return f"\\definecolor{{{m.group(1)}}}{{HTML}}{{{hex}}}\n"
 
-with open("palette/palette.css", "r") as file_in:
-    palette_raw = file_in.read()
-
-pattern = r"--([a-z]+): hsl\(([0-9]+), ([0-9]+)%, ([0-9]+)%\);"
-matches = re.finditer(pattern, palette_raw)
-
-colors = "\\usepackage{xcolor}\n"
+colors_tex = "\\usepackage{xcolor}\n"
 for match in matches:
-    colors += format_definecolor(match)
+    colors_tex += format_definecolor(match)
 
-with open("palette/palette.tex", "w") as file_out:
-    file_out.write(colors)
+with open("themes/palette/palette.tex", "w") as file_out:
+    file_out.write(colors_tex)
+
+
+# Convert to R:
+def format_hex(m):
+    h, s, l = (int(i) / d for i, d in zip(m.groups()[1:], [360, 100, 100]))
+    r, g, b = colorsys.hls_to_rgb(h, l, s)
+    return f"#{int(r * 255):02x}{int(g * 255):02x}{int(b * 255):02x}"
+
+colors_r = "pal <- c(\n"
+for match in matches:
+    colors_r += f'  {match.group(1)} = "{format_hex(match)}",\n'
+colors_r += ")\n"
+
+with open("themes/palette/palette.R", "w") as file_out:
+    file_out.write(colors_r)
