@@ -10,6 +10,8 @@ $itemNames = @(
     "AppData/Roaming/Code/User/snippets",
     "AppData/Roaming/Code/User/keybindings.json",
     "AppData/Roaming/Code/User/settings.json",
+	"AppData/Roaming/Code/User/profiles",
+	"AppData/Roaming/Code/User/prompts",
     "AppData/Roaming/RStudio/config.json",
     "AppData/Roaming/RStudio/rstudio-prefs.json"
 )

@@ -6,12 +6,30 @@
     "when": "!notebookEditorFocused && editorLangId == 'markdown' | editorLangId == 'quarto'"
     },
 //#endregion
-//#region Emphasis -------------------------------------------------------------
-    // For Markdown files
+//#region Snippets -------------------------------------------------------------
+    // Insert code section
+    {
+        "key": "ctrl+shift+r",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && (editorLangId == 'r' || editorLangId == 'python' || editorLangId == 'julia')",
+        "args": {
+            "snippet": "# ${TM_SELECTED_TEXT}${1} ----------------------------------------------------------\n"
+        }
+    },
+    // Insert math section
+    {
+       "key": "ctrl+shift+m",
+       "command": "editor.action.insertSnippet",
+       "when": "editorTextFocus && (editorLangId == 'markdown' || editorLangId == 'quarto' || editorLangId == //'latex' || editorLangId == 'markdown_latex_combined')",
+       "args": {
+           "snippet": "$$\n${TM_SELECTED_TEXT}\n$$"
+       }
+    },
+    // Emphasis for Markdown files
     {
         "key": "ctrl+shift+b",
         "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && (editorLangId == 'markdown' || editorLangId == 'rmd' || editorLangId == 'quarto')",
+        "when": "editorTextFocus && (editorLangId == 'markdown' || editorLangId == 'rmd' || editorLangId == 'quarto' || editorLangId == 'markdown_latex_combined')",
         "args": {
             "snippet": "**${TM_SELECTED_TEXT:${1}}**"
         }
@@ -19,12 +37,12 @@
     {
         "key": "ctrl+shift+i",
         "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && (editorLangId == 'markdown' || editorLangId == 'rmd' || editorLangId == 'quarto')",
+        "when": "editorTextFocus && (editorLangId == 'markdown' || editorLangId == 'rmd' || editorLangId == 'quarto') || editorLangId == 'markdown_latex_combined'",
         "args": {
             "snippet": "_${TM_SELECTED_TEXT:${1}}_"
         }
     },
-    // For LaTeX files
+    // Emphasis for LaTeX files
     {
         "key": "ctrl+shift+b",
         "command": "editor.action.insertSnippet",
@@ -771,5 +789,15 @@
         "key": "escape",
         "command": "-welcome.goBack",
         "when": "inWelcome && activeEditor == 'gettingStartedPage'"
+    },
+    {
+        "key": "ctrl+alt+oem_3",
+        "command": "workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
     }
 ]

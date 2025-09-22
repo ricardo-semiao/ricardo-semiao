@@ -1,3 +1,33 @@
+# Indent continuation lines (default is TRUE)
+options(radian.indent_lines = TRUE)
+
+# Auto match brackets and quotes (default is TRUE)
 options(radian.auto_match = FALSE)
-options(radian.auto_indentation = FALSE)
+
+# Suggestions (default is FALSE)
+options(radian.auto_suggest = FALSE)
+
+# Highlight matching bracket (default is FALSE)
+options(radian.highlight_matching_bracket = TRUE)
+
+# Auto indentation for new line and curly braces
+options(radian.auto_indentation = FALSE) # (default is TRUE)
+options(radian.tab_size = 2) # (default is 4)
+
+
+# Pop up completion while typing (default is TRUE)
 options(radian.complete_while_typing = FALSE)
+# The minimum length of prefix to trigger auto completions (default is 2)
+options(radian.completion_prefix_length = 4)
+# Timeout in seconds to cancel completion if it takes too long (default is 0.05)
+options(radian.completion_timeout = 0)
+# Add spaces around equals in function argument completion (default is TRUE)
+options(radian.completion_adding_spaces_around_equals = TRUE)
+
+
+# User defined shortcuts, keys should be escaped when send through the terminal
+#options(
+#  radian.escape_key_map = list(
+#    list(key = "-", value = " <- "),
+#  )
+#)

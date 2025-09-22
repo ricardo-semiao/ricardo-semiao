@@ -10,10 +10,10 @@
 	"view": {
 		"zoomLevel": 1.1,
 		"windowBounds": {
-			"x": 1268,
-			"y": 60,
-			"width": 304,
-			"height": 204,
+			"x": -20,
+			"y": -16,
+			"width": 1168,
+			"height": 708,
 			"maximized": true
 		},
 		"accessibility": false,
@@ -33,7 +33,7 @@
 		"windows": {
 			"rBinDir": "",
 			"preferR64": true,
-			"rExecutablePath": "C:\\Program Files\\R\\R-4.4.2\\bin\\x64\\Rterm.exe"
+			"rExecutablePath": "C:\\Program Files\\R\\R-4.5.1\\bin\\x64\\Rterm.exe"
 		},
 		"macos": {
 			"checkForRosetta": true

@@ -4,15 +4,21 @@
     "workbench.colorTheme": "Kimbie Dark",
     "workbench.tree.indent": 16,
     "editor.minimap.renderCharacters": false,
+    "editor.wordWrap": "off",
     // General:   
     "window.restoreWindows": "none",
     "workbench.startupEditor": "none",
     "security.workspace.trust.untrustedFiles": "open",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    // File associations:
+    "files.associations": {
+        "*.rmd": "markdown", "*.qmd": "markdown",
+        "*.tidal": "haskell"
+    },
     // Source control:
     "git.enableSmartCommit": false,
-    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.ignoreTrimWhitespace": true,
     // Other Extensions:
     "liveServer.settings.donotShowInfoMsg": true,
     "markdownlint.config": {
@@ -23,7 +29,7 @@
     "cSpell.checkOnlyEnabledFileTypes": true,
     "cSpell.language": "pt-BR,en",
     "cSpell.enabledFileTypes": {
-        "rmd": true, "markdown": true, "quarto": true, "tex": true,
+        "rmd": true, "markdown": true, "tex": true, "qmd": true, "md": true,
         "r": true, "python": true, "julia": true
     },
     "cSpell.languageSettings": [
@@ -36,25 +42,18 @@
         }
     ],
     "cSpell.userWords": [
-        "autocorrelations", "booleano", "booleanos", "Estacionariedade", "macroeconometrics",
-        "metaprogramação", "orthogonalization", "quista", "Semião"
+        "autocorrelations",
+        "booleano",
+        "booleanos",
+        "Estacionariedade",
+        "hyperparameters",
+        "macroeconometrics",
+        "metaprogramação",
+        "orthogonalization",
+        "quista",
+        "Semião"
     ],
 //endregion
-//#region Launch Profiles ------------------------------------------------------
-    "launch": {
-        "configurations": [
-            {
-                "name": "Python (ricar)",
-                "type": "debugpy",
-                "request": "launch",
-                "program": "${file}",
-                "console": "integratedTerminal",
-                "justMyCode": false
-            }
-        ],
-        "compounds": []
-    },
-//#endregion
 //#region Language Configs -----------------------------------------------------
     // Global:
     "editor.insertSpaces": true,
@@ -63,7 +62,7 @@
     "[r][python][julia]": {
         "editor.rulers": [80]
     },
-    "[r]": {
+    "[r][json]": {// maybe add [latex][tex]
         "editor.tabSize": 2
     },
     "[markdown][quarto][rmd]": {
@@ -79,8 +78,9 @@
     "r.alwaysUseActiveTerminal": true,
     "r.plot.useHttpgd": true,
     "r.removeLeadingComments": true,
-    "r.rterm.windows": "C:\\Python310\\Scripts\\radian.exe",
-    "r.rpath.windows": "C:\\Program Files\\R\\R-4.4.2\\bin\\x64\\r.exe",
+    //"r.rterm.windows": "C:\\Python313\\Scripts\\radian.exe",
+    //"r.rterm.option": ["--no-restore"],
+    "r.rpath.windows": "C:\\Program Files\\R\\R-4.5.1\\bin\\x64\\r.exe",
     // Python:
     "jupyter.debugJustMyCode": false,
     "debugpy.debugJustMyCode": false,
@@ -98,6 +98,7 @@
     // General configurations:
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.smoothScrolling": true,
+    "terminal.external.windowsExec": "C:\\Users\\ricar\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe",
     // Profiles:
     "terminal.integrated.defaultProfile.windows": "PowerShell 7",
     "terminal.integrated.profiles.windows": {
@@ -106,8 +107,13 @@
             "icon": "terminal-powershell"
         },
         "R (radian)": {
-            "path": ["C:\\Python310\\Scripts\\radian.exe"],
-            "args": [],
+            "path": ["C:\\Python313\\Scripts\\radian.exe"],
+            "args": [], // Do save data: "--save", "--vanilla"
+            "icon": "terminal"
+        },
+        "R": {
+            "path": ["C:\\Program Files\\R\\R-4.5.1\\bin\\x64\\r.exe"],
+            "args": ["--no-restore"],
             "icon": "terminal"
         },
         "Python": {
@@ -132,37 +138,39 @@
         "R Terminal": null
     },
 //#endregion
+//#region Launch Profiles ------------------------------------------------------
+    "launch": {
+        "configurations": [
+            {
+                "type": "R-Debugger",
+                "name": "Debug R-File",
+                "request": "launch",
+                "debugMode": "file",
+                "workingDirectory": "${workspaceFolder}",
+                "file": "${file}"
+            },
+            {
+                "type": "debugpy",
+                "name": "Python (ricar)",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal",
+                "justMyCode": false
+            }
+        ],
+        "compounds": []
+    },
+//#endregion
 //#region Git and Copilot ------------------------------------------------------
     // General configs:
     "git.confirmSync": false,
     "github.copilot.enable": {
+        "quarto": true,
         "*": true
     },    
     // Prompts:
     "github.copilot.chat.commitMessageGeneration.instructions": [
-        {
-          "text": "Always follow the main commit line with an empty line and a list of items further describing the changes."
-        }
-    ],
-    "github.copilot.chat.codeGeneration.instructions": [
-        {
-        "text": "When adding yaml opptions, start and end with `---`. Keep in mind that yaml variables are often separated by hiphens.",
-        },
-        {
-        "text": "When altering code chunks, do not override the chunk borders '```'.",
-        },
-        {
-        "text": "When adding latex or html to markdown documents, add them raw, without chunk borders'```'.",
-        }
-        //{
-        //"text": "When writing latex math, always and only use `$` or `$$` as the math mode delimiters.",
-        //},
-        //{
-        //"text": "When writing latex math, always and only use one or more '~' as spacers.",
-        //},
-        //{
-        //"text": "When writing latex math in the chat, always and only add raw latex with the `$` delimiter.",
-        //}
+        {"text": "Always include a list of key changes."}
     ],
 //#endregion
 //#region Latex ----------------------------------------------------------------
@@ -326,5 +334,28 @@
 //#region Uncategorized --------------------------------------------------------
     "placeholder": false,
     "window.newWindowProfile": "Default",
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "editor.minimap.size": "fill",
+    "diffEditor.codeLens": true,
+    "[markdown]": {
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+    "application.shellEnvironmentResolutionTimeout": 1,
+    "explorer.autoReveal": false,
+    // "markdown.math.macros": {
+    //     "\\begin{equation}": "$$",
+    //     "\\end{equation}": "$$",
+    //     "\\RR": "\\mathbb{R}"
+    // },
+    "chat.agent.enabled": false,
+    "terminal.integrated.copyOnSelection": true,
+    //"surround.custom": {
+    //    "yourCommandName": {
+    //        "label": "Math $$",
+    //        //"description": "Your Snippet Description",
+    //        "snippet": "$$\n${TM_SELECTED_TEXT}$$",
+    //        "languageIds": ["markdown", "rmd", "quarto", "markdown_latex_combined"]
+    //    },
+    //},
 //#endregion
 }

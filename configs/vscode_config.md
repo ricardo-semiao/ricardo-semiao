@@ -156,7 +156,7 @@ Lots of settings, separated into categories in my `settings.json`.
 #### Terminal
 
 - Run selected text: `Ctrl + Enter`.
-- Open external terminal.
+- Open external terminal `` Ctrl + Alt + ` ``.
 
 
 #### Copilot

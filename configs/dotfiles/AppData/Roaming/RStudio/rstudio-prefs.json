@@ -1,7 +1,7 @@
 {
     "save_workspace": "always",
     "load_workspace": false,
-    "initial_working_directory": "C:/Users/ricar/A-Note/Temporários",
+    "initial_working_directory": "C:/Users/ricar/A-Note/B-Trabalho",
     "remove_history_duplicates": true,
     "editor_theme": "Kr Theme",
     "pdf_previewer": "none",
@@ -14,5 +14,7 @@
     "python_path": "C:/Python313/python.exe",
     "jobs_tab_visibility": "shown",
     "show_help_tooltip_on_idle": true,
-    "restore_last_project": false
+    "restore_last_project": false,
+    "default_encoding": "UTF-8",
+    "source_with_echo": true
 }
