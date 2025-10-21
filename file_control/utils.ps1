@@ -49,7 +49,7 @@ $OneDrivePaths = @(
     "C:\Users\ricar\OneDrive\A-Trabalho",
     "C:\Users\ricar\OneDrive\A-Pessoal"
 )
-$OneDrivePaths = "C:\Users\ricar\OneDrive\A-Trabalho"
+$OneDrivePath = "C:\Users\ricar\OneDrive"
 
 $NotionPath = "C:\Users\ricar\OneDrive\A-Outros\misc-notion-backup\workspace*"
 

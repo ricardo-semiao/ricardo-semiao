@@ -28,7 +28,7 @@ function GrepFilesize {
     # Sorting the file table
     if ($SortBySize) {
         $filesTable = $filesTable | Sort-Object -Property @{
-            Expression = {[double]($_.Size -replace ",| MB", "")}
+            Expression = {[double]($_.Size -replace "\.|,| MB", "")}
         } -Descending
     }
 
@@ -38,5 +38,5 @@ function GrepFilesize {
 }
 
 # Application:
-GrepFilesize $OneDrivePaths $NotionPath "*.RData" -OutputPath "$BaseOutput\files_rdata.csv"
-GrepFilesize $OneDrivePaths $NotionPath "*" 40 -OutputPath "$BaseOutput\files_large.csv"
+#GrepFilesize $OneDrivePaths $NotionPath "*.RData" -OutputPath "$BaseOutput\files_rdata.csv"
+GrepFilesize $OneDrivePaths $NotionPath "*" 100 -OutputPath "$BaseOutput\files_large.csv"

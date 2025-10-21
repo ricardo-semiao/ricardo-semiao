@@ -6,7 +6,15 @@ function ZipFolder {
     )
 
     # Filter and exclude file types (video and audio, large files)
-    $excludeExtensions = @("*.mp4", "*.mod", "*.avi", "*.mov", "*.wmv", "*.flv", "*.mkv", "*.webm", "*.mpeg", "*.mpg", "*.m4v", "*.3gp", "*.3g2", "*.mp3", "*.wav", "*.aac", "*.flac", "*.ogg", "*.wma", "*.m4a", "*.aiff", "*.alac", "*.opus", "*.mkv")
+    $excludeExtensions = @(
+        "*.mp4", "*.mod", "*.avi", "*.mov", "*.wmv", "*.flv", "*.mkv", "*.webm",
+        "*.mpeg", "*.mpg", "*.m4v", "*.3gp", "*.3g2", "*.mp3", "*.wav", "*.aac",
+        "*.flac", "*.ogg", "*.wma", "*.m4a", "*.aiff", "*.alac", "*.opus", "*.mkv"
+        ".recordings*.zip"
+    )
+    $excludeFolders = @(
+        ".git", ".Rproj.user"
+    )
 
     # Prepare a temporary directory to stage files before zipping
     $tempDir = Join-Path $env:TEMP "BackupTemp"
@@ -20,6 +28,9 @@ function ZipFolder {
             foreach ($ext in $excludeExtensions) {
                 if ($_.Name -like $ext) { $exclude = $true; break }
             }
+        }
+        foreach ($folder in $excludeFolders) {
+            if ($_.FullName -like "*\$folder\*") { $exclude = $true; break }
         }
         -not $exclude
     } | ForEach-Object {
@@ -41,7 +52,7 @@ function ZipFolder {
 
 # Application:
 $currentDate = Get-Date -Format "yyyy_MM_dd"
-$Path = "C:\Users\ricar\OneDrive - Fundacao Getulio Vargas - FGV\A-GVCode"
-$OutputPath = "$sourceDir\Áreas\Administrativo\Documentos permanentes\Sharepoint\Backups\GVCode_SP_$currentDate.zip"
+$Path = "C:\Users\ricar\OneDrive"
+$OutputPath = "$sourceDir\A-Outros\Backup_$currentDate.zip"
 
 ZipFolder $Path -OutputPath $OutputPath

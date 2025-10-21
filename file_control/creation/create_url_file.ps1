@@ -1,4 +1,4 @@
-function CreateUrlFile {
+function createUrlFile {
     param (
         [string]$Url,
         [string]$OutputDirectory
