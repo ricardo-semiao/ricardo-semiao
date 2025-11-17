@@ -3,87 +3,38 @@
 
 
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="Ricardo Semião e Castro" name="Author"/>
-  <link href="/site_assets/img/icon.png" rel="icon" type="image/png"/>
-  <link href="/site_assets/img/icon.png" rel="shortcut icon" type="image/png"/>
-  <link href="/site_assets/site_structure.css" rel="stylesheet"/>
-  <link href="/site_assets/site_style.css" rel="stylesheet"/>
-
-  {{{ head }}}
-  {{{ in-header }}}
+    {{{ head }}}
+    {{{ in-header }}}
 </head>
 
 
 <body>
-  <header id="site-header">
-      <div class="header-block"></div>
-      <nav>
-          <ul>
-              <li class="nav-li">
-                  <a href="/">Home</a>
-              </li>
-              <li class="nav-li">
-                  <a href="/cv.html">CV</a>
-              </li>
-              <li class="nav-drop">
-                  <p>Courses</p>
-                  <button></button>
-                  <ul>
-                      <li class="nav-li">
-                          <a href="/course-rfcd/">R (RFCD)</a>
-                      </li>
-                      <li class="nav-li">
-                          <a href="/course-ccia/">CS (CCIA)</a>
-                      </li>
-                      <li class="nav-li">
-                          <a href="/course-paaml/">Python (PAAML)</a>
-                      </li>
-                  </ul>
-              </li>
-              <li class="nav-drop">
-                  <p>Packages</p>
-                  <button></button>
-                  <ul>
-                      <li class="nav-li">
-                          <a href="/mtsdesc/">mtsdesc</a>
-                      </li>
-                      <li class="nav-li">
-                          <a href="/phyopt/">phyopt</a>
-                      </li>
-                      <li class="nav-li">
-                          <a href="/morphdown/">morphdown</a>
-                      </li>
-                  </ul>
-              </li>
-          </ul>
-      </nav>
-      <div class="header-block"></div>
-  </header>
+    <!-- @@site-icons@@ -->
+    <a href="#main" class="visually-hidden-focusable">{{#translate}}{{skip}}{{/translate}}</a>
 
-  <a href="#main" class="visually-hidden-focusable">{{#translate}}{{skip}}{{/translate}}</a>
+    {{{ before-body }}}
 
-  {{{ before-body }}}
+    <main id="rspkgdown-main">
+        {{{ navbar }}}
+        <div class="container template-{{template}}">
+            {{{ content }}}
+        </div>
+    </main>
 
-  <div id="site-main">
-    {{{ navbar }}}
+    <footer id="rssite-footer">
+        <p>
+            Package made with <a href="https://pkgdown.r-lib.org/">pkgdown</a><span class="footer-div"></span><a href="https://github.com/ricardo-semiao/ricardo-semiao/tree/main/themes/rspkgdown">rspkgdown</a> theme.</p>
+    </footer>
 
-    <div class="container template-{{template}}">
-      {{{ content }}}
-    </div>
-  </div>
+    <button id="show-navbar" aria-hidden="true" aria-controls="pkgdown-navbar" aria-label="Show package navbar"></button>
+    <button id="back-to-top" aria-hidden="true" onclick="window.scrollTo(0, 0); return false;">
+        <span>↑</span> Back to top
+    </button>
 
-  <footer id="site-footer">
-      <div>
-          <p>Page built on <a href="https://pkgdown.r-lib.org/">pkgdown</a>, with <a href="https://github.com/ricardo-semiao/ricardo-semiao/tree/main/themes/rspkgdown">rspkgdown</a> theme.</p>
-      </div>
-  </footer>
+    <script src="{{#site}}{{root}}{{/site}}assets/rspd_module.js"></script>
 
-  {{{ docsearch }}}
-  {{{ after-body }}}
-
-  <script src="/site_assets/site_structure.js"></script>
+    {{{ docsearch }}}
+    {{{ after-body }}}
 </body>
 
 

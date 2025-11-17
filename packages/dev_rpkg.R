@@ -66,8 +66,8 @@ revdepcheck::revdep_check()
 devtools::install(upgrade = FALSE) # Unistall with `uninstall()`
 devtools::build_manual(path = "personal/")
 
-unlink("docs", recursive = TRUE) # Good practice to clean before building site
-devtools::build_site(preview = FALSE)
+pkgdown::clean_site(force = TRUE)
+pkgdown::build_site(preview = FALSE)
 
 devtools::build(path = "personal/")
 devtools::build(path = "personal/", binary = TRUE)

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="$if(lang)$$lang$$else$en$endif$">
+
+
+<head>
+    <!-- Meta -->
+    @@site-charset-viewport@@
+
+    <title>$pagetitle$</title>
+
+    @@site-social@@
+
+    $if(description)$<meta name="description" content="$description$" />$endif$
+    <meta name="generator" content="placeholder" />
+
+    <meta property="og:title" content="$pagetitle$" />
+    <meta property="og:type" content="book" />
+    $if(url)$<meta property="og:url" content="$url$" />$endif$
+    $if(cover-image)$<meta property="og:image" content="$url$/$cover-image$" />$endif$
+    $if(description)$<meta property="og:description" content="$description$" />$endif$
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="$pagetitle$" />
+    $if(twitter-handle)$<meta name="twitter:site" content="@$twitter-handle$" />$endif$
+    $if(description)$<meta name="twitter:description" content="$description$" />$endif$
+    $if(cover-image)$<meta name="twitter:image" content="$url$/$cover-image$" />$endif$
+
+    <!-- JS -->
+    $for(header-includes)$
+    $header-includes$
+    $endfor$
+    @@bs4-js@@
+
+    <!-- CSS -->
+    @@bookdown-css@@
+
+    $for(css)$
+    <link rel="stylesheet" href="$css$" />
+    $endfor$
+
+    @@site-style@@
+    <link rel="stylesheet" href="./assets/rsbd_module.css">
+
+    <!-- Analytics -->
+    <script data-goatcounter="https://ricardo-semiao.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+
+<body data-spy="scroll" data-target="#toc">
+    <!-- @@site-icons@@ -->
+
+    <div id="rsbookdown-main" class="container-fluid">
+<!--bookdown:title:start-->
+<!--bookdown:title:end-->
+
+    <!-- Main Nav -->
+<!--bookdown:toc:start-->
+        <div class="row">
+            @@bs4-mainnav@@
+            <main class="col-sm-12 col-md-9 col-lg-7" id="content">
+$for(include-before)$
+$include-before$
+$endfor$
+<!--bookdown:toc:end-->
+
+    <!-- Body -->
+<!--bookdown:body:start-->
+$body$
+<!--bookdown:body:end-->
+$for(include-after)$
+$include-after$
+$endfor$
+            </main>
+
+            <!-- Sub Nav -->
+            @@bs4-subnav@@
+        </div>
+    </div> <!-- .container -->
+
+    @@rfcd-footer@@
+    <button id="back-to-top" aria-hidden="true" onclick="window.scrollTo(0, 0); return false;">
+        <span>↑</span> Back to top
+    </button>
+
+<!-- Scripts -->
+    <script src="./assets/rsbd_module.js"></script>
+
+$if(math)$
+<!-- dynamically load mathjax for compatibility with self-contained -->
+@@bs4-math@@
+$endif$
+
+</body>
+
+
+</html>

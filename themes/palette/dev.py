@@ -2,13 +2,17 @@
 # Setup
 import re
 import colorsys
+from subprocess import run
 
 # Compile palette:
-# sass "palette/palette.scss" "palette/palette.css" --no-source-map
+run(
+    ["sass", "palette/rspalette.scss", "palette/rspalette.css", "--no-source-map"],
+    check=True
+)
 
 
 # Read CSS and get matches:
-with open("themes/palette/palette.css", "r") as file_in:
+with open("themes/palette/rspalette.css", "r") as file_in:
     palette_raw = file_in.read()
 
 pattern = r"--([a-z]+): hsl\(([0-9]+), ([0-9]+)%, ([0-9]+)%\);"
@@ -27,7 +31,7 @@ colors_tex = "\\usepackage{xcolor}\n"
 for match in matches:
     colors_tex += format_definecolor(match)
 
-with open("themes/palette/palette.tex", "w") as file_out:
+with open("themes/palette/rspalette.tex", "w") as file_out:
     file_out.write(colors_tex)
 
 
@@ -42,5 +46,5 @@ for match in matches:
     colors_r += f'  {match.group(1)} = "{format_hex(match)}",\n'
 colors_r += ")\n"
 
-with open("themes/palette/palette.R", "w") as file_out:
+with open("themes/palette/rspalette.R", "w") as file_out:
     file_out.write(colors_r)

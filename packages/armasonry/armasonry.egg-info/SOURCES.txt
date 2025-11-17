@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+armasonry/__init__.py
+armasonry/armasonry.py
+armasonry.egg-info/PKG-INFO
+armasonry.egg-info/SOURCES.txt
+armasonry.egg-info/dependency_links.txt
+armasonry.egg-info/requires.txt
+armasonry.egg-info/top_level.txt

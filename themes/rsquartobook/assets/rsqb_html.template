@@ -33,55 +33,12 @@ $endif$
 
     <link href="/site_assets/site_structure.css" rel="stylesheet"/>
     <link href="/site_assets/site_style.css" rel="stylesheet"/>
-    <link href="assets/rsquartobook/rsqb_style.css" rel="stylesheet"/>
+    <link href="assets/template/site_style.css" rel="stylesheet"/>
 </head>
 
 <body>
 
-    <header id="site-header">
-        <div class="header-block"></div>
-        <nav>
-            <ul>
-                <li class="nav-li">
-                    <a href="/">Home</a>
-                </li>
-                <li class="nav-li">
-                    <a href="/cv.html">CV</a>
-                </li>
-                <li class="nav-drop">
-                    <p>Courses</p>
-                    <button></button>
-                    <ul>
-                        <li class="nav-li">
-                            <a href="/course-rfcd/">R (RFCD)</a>
-                        </li>
-                        <li class="nav-li">
-                            <a href="/course-ccia/">CS (CCIA)</a>
-                        </li>
-                        <li class="nav-li">
-                            <a href="/course-paaml/">Python (PAAML)</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-drop">
-                    <p>Packages</p>
-                    <button></button>
-                    <ul>
-                        <li class="nav-li">
-                            <a href="/mtsdesc/">mtsdesc</a>
-                        </li>
-                        <li class="nav-li">
-                            <a href="/phyopt/">phyopt</a>
-                        </li>
-                        <li class="nav-li">
-                            <a href="/morphdown/">morphdown</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div class="header-block"></div>
-    </header>
+    <!-- @@site-header@@ added in the personal site build step -->
     <div class="container-fluid">
 
 $for(include-before)$
@@ -127,8 +84,7 @@ $endfor$
             <p>Livro foi feito via <a href="https://quarto.org/docs/books/">Quarto</a>, com o template <a href="https://github.com/ricardo-semiao/ricardo-semiao/tree/main/themes/rsquartobook">rsquartobook</a>.</p>
         </div>
     </footer>
-    <script src="/site_assets/site_structure.js"></script>
-    <script src="assets/rsquartobook/rsqb_script.js"></script>
+    <!-- @@site-scripts@@ added in the personal site build step -->
 
 </body>
 

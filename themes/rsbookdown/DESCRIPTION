@@ -1,10 +1,11 @@
 Package: rsbookdown
 Type: Package
-Title: Ricardo Semião's Bookdown Template
+Title: Ricardo Semião's bookdown Template
 Version: 0.0.0.9000
 Authors@R: 
     person("Ricardo", "Semião", , "ricardo.semiao@outlook.com", role = c("aut", "cre"))
-Description: Ricardo Semião's Bookdown Template
+Description: Ricardo Semião's bookdown template.
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
+License: MIT

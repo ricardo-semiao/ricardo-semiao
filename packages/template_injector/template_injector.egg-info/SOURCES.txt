@@ -1,5 +1,5 @@
 README.md
-setup.py
+pyproject.toml
 template_injector/__init__.py
 template_injector/build.py
 template_injector.egg-info/PKG-INFO

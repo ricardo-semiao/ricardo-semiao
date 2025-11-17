@@ -21,13 +21,16 @@ def components_html_to_dict(components_paths):
     return components
 
 
-def inject_components(template, components):
+def inject_components(template, components, allow_inline):
     for key, value in components.items():
-        pattern = re.compile(r'\n([ \t]+)@@' + re.escape(key) + '@@')
-        match = re.search(pattern, template)
+        if allow_inline:
+            pattern = re.compile('@@' + re.escape(key) + '@@')
+        else:
+            pattern = re.compile(r'\n([ \t]*)@@' + re.escape(key) + '@@')
 
+        match = re.search(pattern, template)
         if match:
-            cur_indent = match.group(1)
+            cur_indent = '' if allow_inline else match.group(1)
         else:
             continue
 
@@ -37,13 +40,17 @@ def inject_components(template, components):
     return template
 
 
-def build(template_path, components_paths, output_path, prettify = False):
+def build(
+    template_path, components_paths, output_path,
+    allow_inline = True,
+    prettify = False, quiet = False
+):
     components = components_html_to_dict(components_paths)
 
     with open(template_path, 'r', encoding='utf-8') as file:
         template = file.read()
 
-    output = inject_components(template, components)
+    output = inject_components(template, components, allow_inline)
 
     if prettify:
         output = indent(output, indentation = '    ', newline = '\n')
@@ -51,4 +58,5 @@ def build(template_path, components_paths, output_path, prettify = False):
     with open(output_path, 'w', encoding='utf-8') as file:
         file.write(output)
 
-    print(f'Injected components into {output_path}')
+    if not quiet:
+        print(f'Injected components into {output_path}')

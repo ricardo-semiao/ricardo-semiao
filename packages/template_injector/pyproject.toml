@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "template_injector"
+version = "0.1.0"
+description = "A simple HTML template engine built in Python."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Ricardo Semião e Castro", email = "ricardo.semiao@outlook.com" }
+]
+dependencies = [
+    "beautifulsoup4>=4.9.0",
+    "yattag>=1.14.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]

@@ -1,7 +1,10 @@
 <div data-component-name="rfcd-footer">
-    <footer id="site-footer">
-        <div>
-            <p>Livro foi feito no R, com <a href="https://bookdown.org">bookdown</a>, e o tema <a href="https://github.com/ricardo-semiao/ricardo-semiao/tree/main/themes/rsbookdown">rsbookdown</a>.</p>
+    <footer id="rssite-footer">
+        <p>
+            Livro feito com <a href="https://bookdown.org">bookdown</a>
+            <span class="footer-div"></span>
+            tema <a href="https://github.com/ricardo-semiao/ricardo-semiao/tree/main/themes/rsbookdown">rsbookdown</a>.
+        </p>
         </div>
     </footer>
 </div>
@@ -89,4 +92,37 @@
         }
     }
     </script>
+</div>
+
+<div data-component-name="bookdown-css">
+    <style type="text/css">
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    </style>
+    $if(csl-css)$
+    <style type="text/css">
+        /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+        div.csl-bib-body { }
+        div.csl-entry {
+            clear: both;
+        $if(csl-entry-spacing)$
+            margin-bottom: $csl-entry-spacing$;
+        $endif$
+        }
+        .hanging div.csl-entry {
+            margin-left:2em;
+            text-indent:-2em;
+        }
+        div.csl-left-margin {
+            min-width:2em;
+            float:left;
+        }
+        div.csl-right-inline {
+            margin-left:2em;
+            padding-left:1em;
+        }
+        div.csl-indent {
+            margin-left: 2em;
+        }
+    </style>
+    $endif$
 </div>

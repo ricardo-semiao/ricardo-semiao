@@ -12,3 +12,9 @@ Some technical aspects:
 - The injection is done with regular expressions via `re.sub`.
 - The HTML of the components is parsed with BeautifulSoup.
 - The injected output is prettified using `yattag.indent`.
+
+Build with:
+
+```
+pip install packages\template_injector
+```

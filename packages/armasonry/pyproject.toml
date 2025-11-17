@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "armasonry"
+version = "0.1.0"
+description = "Adam's Ribs masonry - a packing algorithm for rectangles with discrete dimensions."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Ricardo Semião e Castro", email = "ricardo.semiao@outlook.com" }
+]
+dependencies = [
+    "numpy>=2.0.0"
+]

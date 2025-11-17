@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{{lang}}}">
+
+
+<head>
+    {{{ head }}}
+    {{{ in-header }}}
+</head>
+
+
+<body>
+    <!-- @@site-icons@@ -->
+    <a href="#main" class="visually-hidden-focusable">{{#translate}}{{skip}}{{/translate}}</a>
+
+    {{{ before-body }}}
+
+    <main id="rspkgdown-main">
+        {{{ navbar }}}
+        <div class="container template-{{template}}">
+            {{{ content }}}
+        </div>
+    </main>
+
+    @@rspkgdown-footer@@
+
+    <button id="show-navbar" aria-hidden="true" aria-controls="pkgdown-navbar" aria-label="Show package navbar"></button>
+    <button id="back-to-top" aria-hidden="true" onclick="window.scrollTo(0, 0); return false;">
+        <span>↑</span> Back to top
+    </button>
+
+    <script src="{{#site}}{{root}}{{/site}}assets/rspd_module.js"></script>
+
+    {{{ docsearch }}}
+    {{{ after-body }}}
+</body>
+
+
+</html>
