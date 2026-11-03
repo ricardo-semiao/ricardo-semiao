@@ -1,34 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-:root {
-  --gray: hsl(0, 0%, 95%);
-  --darkgray: hsl(0, 0%, 80%);
-  --lightgray: hsl(0, 0%, 97.5%);
-  --aquagray: hsl(0, 0%, 98.5%);
-  --blackgray: hsl(0, 0%, 40%);
-  --fontblack: hsl(210, 11%, 15%);
-  --red: hsl(350, 100%, 40%);
-  --darkred: hsl(350, 100%, 30%);
-  --lightred: hsl(350, 70%, 60%);
-  --aquared: hsl(350, 75%, 85%);
-  --orange: hsl(25, 100%, 40%);
-  --darkorange: hsl(25, 100%, 25%);
-  --lightorange: hsl(25, 70%, 60%);
-  --aquaorange: hsl(25, 80%, 85%);
-  --yellow: hsl(47, 100%, 45%);
-  --darkyellow: hsl(47, 100%, 30%);
-  --lightyellow: hsl(47, 90%, 70%);
-  --aquayellow: hsl(47, 85%, 85%);
-  --green: hsl(163, 100%, 25%);
-  --darkgreen: hsl(163, 100%, 15%);
-  --lightgreen: hsl(163, 70%, 45%);
-  --aquagreen: hsl(163, 75%, 80%);
-  --blue: hsl(185, 100%, 30%);
-  --darkblue: hsl(185, 100%, 15%);
-  --lightblue: hsl(185, 60%, 50%);
-  --aquablue: hsl(185, 75%, 80%);
-}
-
 @layer resets;
 @layer resets {
   html {
@@ -48,7 +17,6 @@
     margin: 0;
     padding: 0;
     border: 0;
-    outline: 0;
     line-height: 1.5;
   }
   p, li, dd, a, h1, h2, h3, h4, h5, h6 {
@@ -78,6 +46,35 @@
     scroll-behavior: auto !important;
   }
 }
+:root {
+  --gray: hsl(0, 0%, 95%);
+  --darkgray: hsl(0, 0%, 80%);
+  --lightgray: hsl(0, 0%, 97.5%);
+  --aquagray: hsl(0, 0%, 98.5%);
+  --blackgray: hsl(0, 0%, 40%);
+  --fontblack: hsl(210, 11%, 15%);
+  --red: hsl(350, 100%, 40%);
+  --darkred: hsl(350, 100%, 30%);
+  --lightred: hsl(350, 70%, 60%);
+  --aquared: hsl(350, 75%, 85%);
+  --orange: hsl(25, 100%, 40%);
+  --darkorange: hsl(25, 100%, 25%);
+  --lightorange: hsl(25, 70%, 60%);
+  --aquaorange: hsl(25, 80%, 85%);
+  --yellow: hsl(47, 100%, 45%);
+  --darkyellow: hsl(47, 100%, 30%);
+  --lightyellow: hsl(47, 90%, 70%);
+  --aquayellow: hsl(47, 85%, 85%);
+  --green: hsl(163, 100%, 25%);
+  --darkgreen: hsl(163, 100%, 15%);
+  --lightgreen: hsl(163, 70%, 45%);
+  --aquagreen: hsl(163, 75%, 80%);
+  --blue: hsl(185, 100%, 30%);
+  --darkblue: hsl(185, 100%, 15%);
+  --lightblue: hsl(185, 60%, 50%);
+  --aquablue: hsl(185, 75%, 80%);
+}
+
 body {
   font-weight: 400;
   font-family: "Nunito Sans", sans-serif;
@@ -132,11 +129,6 @@ a:hover, a:active, a:focus {
 
 body {
   --main-width: min(65%, 80rem);
-  --body-min-width: 16rem;
-  min-width: var(--body-min-width);
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
 }
 @media (max-width: 920px) {
   body {
@@ -148,6 +140,13 @@ body {
     --main-width: min(95%, calc(100% - 1rem));
   }
 }
+body {
+  --body-min-width: 16rem;
+  min-width: var(--body-min-width);
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
 body #rssite-main {
   flex-grow: 1;
   min-width: var(--body-min-width);
@@ -157,7 +156,6 @@ body #rssite-main {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
   box-sizing: content-box;
   line-height: 1.5;
 }
@@ -166,7 +164,6 @@ body #rssite-main {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
 }
 
 #rssite-header {
@@ -195,6 +192,10 @@ body #rssite-main {
 #rssite-header a {
   text-decoration: none;
 }
+#rssite-header svg {
+  fill: var(--green);
+  color: var(--green);
+}
 #rssite-header nav {
   flex: 0 0 var(--main-width);
 }
@@ -220,12 +221,12 @@ body #rssite-main {
 #rssite-header nav > ul > li {
   display: inline-block;
 }
-#rssite-header nav > ul > li + li {
-  margin-left: 2rem;
+#rssite-header nav > ul > li:not(:last-child) {
+  margin-right: 1.25rem;
 }
 @media (max-width: 700px) {
-  #rssite-header nav > ul > li + li {
-    margin-left: 1rem;
+  #rssite-header nav > ul > li:not(:last-child) {
+    margin-right: 0.75rem;
   }
 }
 #rssite-header .nav-drop {
@@ -251,6 +252,7 @@ body #rssite-main {
 }
 #rssite-header .nav-drop li {
   padding-left: 0.5rem;
+  min-width: max-content;
 }
 #rssite-header .nav-drop li + li {
   margin-top: 0.5rem;
@@ -258,11 +260,22 @@ body #rssite-main {
 #rssite-header .nav-drop a {
   font-size: 1.1rem;
 }
+#rssite-header .nav-drop .nav-li svg {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  margin-right: 0.25rem;
+}
 #rssite-header .nav-drop button {
   display: flex;
   padding: 0.25rem 0.5rem;
   color: var(--green);
   cursor: default;
+}
+@media (max-width: 920px) {
+  #rssite-header .nav-drop {
+    padding: 0.125rem;
+  }
 }
 #rssite-header .nav-drop button::after {
   content: "";
@@ -285,10 +298,10 @@ body #rssite-main {
 #rssite-header .nav-drop button[aria-current=page] svg {
   transform: scale(1.2);
   fill: var(--darkgreen);
+  color: var(--darkgreen);
 }
 #rssite-header .nav-drop button svg {
   display: none;
-  fill: var(--green);
 }
 @media (max-width: 920px) {
   #rssite-header .nav-drop button {
@@ -301,15 +314,30 @@ body #rssite-main {
     width: 1em;
   }
 }
+#rssite-header .nav-drop .nav-extra {
+  display: none;
+}
+#rssite-header .nav-extra + li {
+  margin-top: 0rem;
+}
 @media (max-width: 360px) {
+  #rssite-header nav ul > .nav-extra {
+    display: none;
+  }
+  #rssite-header .nav-drop .nav-extra {
+    display: inline-block;
+  }
+  #rssite-header .nav-extra + li {
+    margin-top: 0.25rem;
+  }
   #rssite-header .nav-drop button::after {
     content: none;
   }
   #rssite-header .nav-drop ul {
     right: 0;
   }
-  #rssite-header nav > ul > li + li {
-    margin-left: 0.5rem;
+  #rssite-header nav > ul > li:not(:last-child) {
+    margin-right: 0.5rem;
   }
 }
 
@@ -319,11 +347,12 @@ body #rssite-main {
   margin: 0;
   min-width: var(--body-min-width);
 }
-#rssite-footer p {
+#rssite-footer div {
   width: var(--main-width);
   margin: auto;
-  text-align: right;
   color: var(--darkgray);
+  display: flex;
+  justify-content: space-between;
 }
 #rssite-footer a {
   color: var(--darkgray);

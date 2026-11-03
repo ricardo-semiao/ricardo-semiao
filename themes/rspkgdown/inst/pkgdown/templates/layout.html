@@ -14,7 +14,7 @@
 
     {{{ before-body }}}
 
-    <main id="rspkgdown-main">
+    <main id="rssite-main" class="rssite-rspkgdown">
         {{{ navbar }}}
         <div class="container template-{{template}}">
             {{{ content }}}
@@ -22,9 +22,10 @@
     </main>
 
     <footer id="rssite-footer">
-        <p>
-            Package made with <a href="https://pkgdown.r-lib.org/">pkgdown</a><span class="footer-div"></span><a href="https://github.com/ricardo-semiao/ricardo-semiao/tree/main/themes/rspkgdown">rspkgdown</a> theme.</p>
-    </footer>
+    <div>
+        <p>Site made with <a href="https://pkgdown.r-lib.org/">pkgdown</a><span class="footer-div"></span><a href="https://github.com/ricardo-semiao/ricardo-semiao/tree/main/themes/rspkgdown">rspkgdown</a></p>
+    </div>
+</footer>
 
     <button id="show-navbar" aria-hidden="true" aria-controls="pkgdown-navbar" aria-label="Show package navbar"></button>
     <button id="back-to-top" aria-hidden="true" onclick="window.scrollTo(0, 0); return false;">

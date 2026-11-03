@@ -19,6 +19,6 @@ This function sets the `id` attribute of the navbar element in HTML files
 within the specified folder to `"pkgdown-navbar"`. This is required for
 the `aria` target of the show-navbar button to work correctly. The navbar
 element is identified using an XPath query for elements with `id` equal to
-`"rspkgdown-main"` and a `nav` child containing the `"navbar"` class.
+`"rssite-main.rssite-rspkgdown"` and a `nav` child containing the `"navbar"` class.
 Matching elements are found using `xml2::xml_find_all()`.
 }

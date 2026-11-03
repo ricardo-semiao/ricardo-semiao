@@ -17,53 +17,57 @@
 <h4 align="center">My projects:</h4>
 <div align="center">
 <table>
-    <tr>
-        <td valign="top">
-            <p>Academic articles/tasks:</p>
-            <ul>
-                <li><a href="https://github.com/ricardo-semiao/article-regime-id-performance">article-regime-id-performance</a></li>
-                <li><a href="https://github.com/ricardo-semiao/misc-masters">misc-masters</a></li>
-                <li><a href="https://github.com/ricardo-semiao/article-covid-svardiff">article-covid-svardiff</a></li>
-            </ul>
-        </td>
-        <td valign="top">
-            <p>R packages:</p>
-            <ul>
-                <li><a href="https://ricardo-semiao.github.io/phyopt">phyopt</a></li>
-                <li><a href="https://ricardo-semiao.github.io/mtsdesc">mtsdesc</a></li>
-                <li><a href="https://github.com/ricardo-semiao/morphdown">morphdown</a></li>
-            </ul>
-        </td>
-        <td valign="top">
-            <p>Python packages:</p>
-            <ul>
-                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao/tree/main/packages/armasonry">armasonry</a></li>
-                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao/tree/main/packages/template_injector">template_injector</a></li>
-            </ul>
-        </td>
-    </tr>
+<tr>
+    <td valign="top">
+        <p>Academic articles/tasks:</p>
+        <ul>
+            <li><a href="https://ricardo-semiao.github.io/library/article-regime-id-performance">Masters' thesis</a></li>
+            <li><a href="https://github.com/ricardo-semiao/corradi-predictive-conditional-alphas">Corradi et. al (2013)</a></li>
+            <li><a href="https://ricardo-semiao.github.io/library/article-covid-svardiff">Graduation thesis</a></li>
+            <li><a href="https://github.com/ricardo-semiao/misc-masters">Master's tasks</a></li>
+        </ul>
+    </td>
+    <td valign="top">
+        <p>R packages:</p>
+        <ul>
+            <li><a href="https://ricardo-semiao.github.io/tools/predicater">predicater</a></li>
+            <li><a href="https://ricardo-semiao.github.io/tools/phyopt">phyopt</a></li>
+            <li><a href="https://ricardo-semiao.github.io/tools/mtsdesc">mtsdesc</a></li>
+            <li><a href="https://github.com/ricardo-semiao/morphdown">morphdown</a></li>
+        </ul>
+    </td>
+    <td valign="top">
+        <p>Python packages:</p>
+        <ul>
+            <li><a href="https://github.com/ricardo-semiao/ricardo-semiao/tools/hfpca">hfpca</a></li>
+            <li><a href="https://github.com/ricardo-semiao/ricardo-semiao/tree/main/packages/armasonry">armasonry</a></li>
+            <li><a href="https://github.com/ricardo-semiao/ricardo-semiao/tree/main/packages/template_injector">template_injector</a></li>
+        </ul>
+    </td>
+</tr>
 </table>
 </div>
 
 <div align="center">
 <table>
-    <tr>
-        <td valign="top">
-            <p>Site and tools:</p>
-            <ul>
-                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao/">Personal themes/tools</a></li>
-                <li><a href="https://github.com/ricardo-semiao/ricardo-semiao.github.io/">Personal website</a></li>
-            </ul>
-        </td>
-        <td valign="top">
-            <p>Miscellaneous:</p>
-            <ul>
-                <li><a href="https://ricardo-semiao.github.io/course-rfcd">RFCD book</a></li>
-                <li><a href="https://github.com/ricardo-semiao/misc-general">misc-general</a></li>
-                <li><a href="https://github.com/mevaldt/diversified_crypto">mevaldt/diversified_crypto</a></li>
-            </ul>
-        </td>
-    </tr>
+<tr>
+    <td valign="top">
+        <p>Site and tools:</p>
+        <ul>
+            <li><a href="https://github.com/ricardo-semiao/ricardo-semiao.github.io/">Personal website</a></li>
+            <li><a href="https://github.com/ricardo-semiao/ricardo-semiao/">Personal themes/tools</a></li>
+        </ul>
+    </td>
+    <td valign="top">
+        <p>Miscellaneous:</p>
+        <ul>
+            <li><a href="https://ricardo-semiao.github.io/library/rfcd">RFCD book</a></li>
+            <li><a href="https://atualizamre.com.br/calculadora/">Itamaraty calculator</a></li>
+            <li><a href="https://github.com/mevaldt/diversified_crypto">diversified_crypto</a></li>
+            <li><a href="https://github.com/ricardo-semiao/misc-general">misc-general</a></li>
+        </ul>
+    </td>
+</tr>
 </table>
 </div>
 

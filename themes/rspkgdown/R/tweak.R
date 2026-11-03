@@ -58,7 +58,7 @@ tweak_link_subfolders <- function(selector, folder = "docs") {
 #' within the specified folder to `"pkgdown-navbar"`. This is required for
 #' the `aria` target of the show-navbar button to work correctly. The navbar
 #' element is identified using an XPath query for elements with `id` equal to
-#' `"rspkgdown-main"` and a `nav` child containing the `"navbar"` class.
+#' `"rssite-main.rssite-rspkgdown"` and a `nav` child containing the `"navbar"` class.
 #' Matching elements are found using `xml2::xml_find_all()`.
 #'
 #' @param folder [`character(1)`] [optional] Path to the root folder containing
@@ -77,7 +77,7 @@ tweak_navbar_id <- function(folder = "docs") {
     doc <- xml2::read_html(file)
     nav <- xml2::xml_find_all(
       doc,
-      '//*[@id="rspkgdown-main"]/nav[contains(@class, "navbar")]'
+      '//*[@id="rssite-main"]/nav[contains(@class, "navbar")]'
     )
     xml2::xml_set_attr(nav, "id", "pkgdown-navbar")
     xml2::write_html(doc, file)

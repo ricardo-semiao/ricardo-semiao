@@ -189,10 +189,10 @@ if (FALSE) {
 
 if (FALSE) {
   # A1. Define its name:
-  available::available("...")
+  available::available("pkgname")
 
   # A2. Create the package:
-  usethis::create_package("testpkg", check_name = FALSE)
+  usethis::create_package("../pkgname", check_name = FALSE)
   # Also consider `create_tidy_package()`, but I prefer to set up manually
 
   # A3. Set up version control:

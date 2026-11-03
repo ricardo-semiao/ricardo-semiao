@@ -2,7 +2,8 @@
 # Setup ------------------------------------------------------------------------
 
 library(reticulate)
-use_python("C:/Python310")
+library(glue)
+use_python("C:/Users/ricar/.venv-default/Scripts/python.exe")
 
 
 
@@ -14,7 +15,7 @@ fetch_global_assets <- function(path, remote = TRUE) {
       readLines(paste0("https://ricardo-semiao.github.io/assets/", asset_name))
       # Read global components from git
     } else {
-      readLines(paste0("../ricardo-semiao.github.io/_dist/assets/", asset_name))
+      readLines(paste0("../ricardo-semiao.github.io/_site/assets/", asset_name))
     }
     writeLines(file, paste0(path, asset_name))
   })
@@ -68,3 +69,5 @@ file.copy(
 devtools::document("themes/rsbookdown")
 #devtools::check("themes/rsbookdown")
 devtools::install("themes/rsbookdown", upgrade = FALSE)
+
+desc::desc_bump_version("dev", "themes/rsbookdown/DESCRIPTION", TRUE)
